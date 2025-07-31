@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayurveda Clinic - Your Trusted Ayurvedic Healing Center in Calicut</title>
+  
+  <meta name="description" content="Welcome to Ayurveda Clinic, Calicut's leading Ayurvedic healing center. We offer authentic treatments like Panchakarma, Abhyanga, and personalized care from experienced doctors.">
+
+  <!-- CSS LIBRARIES (Cleaned up, no duplicates) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- In <head> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- YOUR CUSTOM STYLES -->
+  <style>
+    /* --- General Styles --- */
+    /* In style.css */
+    body {
+    font-family: 'Lato', sans-serif; /* New body font */
+    background-color: #F7F6F1;
+    color: #4A4A4A;
+    }
+
+    h1, h2, h3, h4, h5, h6, .navbar-brand, .promo-button, .btn {
+    font-family: 'Montserrat', sans-serif; /* New heading font */
+    }
+    html {
+    scroll-behavior: smooth;
+    }
+
+    /* --- UI/UX Friendly Navbar Styles --- */
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.3) !important; 
+        transition: background-color 0.4s ease-in-out;
+    }
+    .navbar.scrolled {
+        background-color: #ffffff !important;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .navbar .navbar-brand,
+    .navbar .navbar-nav .nav-link {
+        color: #ffffff !important;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+        transition: color 0.4s ease-in-out;
+    }
+    .navbar .btn-brand {
+        background-color: #ffffff;
+        color: #365C32;
+        border: 1px solid #ffffff;
+        border-radius: 20px;
+        padding: 8px 20px;
+        transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+    }
+    .navbar.scrolled .navbar-brand,
+    .navbar.scrolled .navbar-nav .nav-link {
+        color: #365C32 !important;
+        text-shadow: none;
+    }
+    .navbar.scrolled .btn-brand {
+        background-color: #365C32;
+        color: #ffffff;
+    }
+    .navbar.scrolled .navbar-nav .nav-link:hover {
+        color: #DDB95A !important;
+    }
+    @media (max-width: 991.98px) {
+        .navbar {
+            background-color: #ffffff !important;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .navbar .navbar-brand,
+        .navbar .navbar-nav .nav-link {
+            color: #365C32 !important;
+            text-shadow: none;
+        }
+        .navbar .btn-brand {
+            background-color: #365C32;
+            color: #ffffff;
+        }
+        .navbar .navbar-nav .nav-link:hover {
+            color: #DDB95A !important;
+        }
+    }
+    .btn-brand:hover {
+        background-color: #2A4726;
+        color: white;
+    }
+    
+    /* --- Hero Carousel Styles --- */
+    .hero-carousel .carousel-item {
+      height: 90vh;
+      min-height: 500px;
+      background-size: cover;
+      background-position: center;
+    }
+    .overlay {
+      background: rgba(0, 0, 0, 0.45);
+      height: 100%;
+      width: 100%;
+    }
+    .carousel-caption {
+      bottom: 25%;
+    }
+    .carousel-caption .display-4 {
+        font-weight: bold;
+    }
+
+    /* --- General Section Styles --- */
+    .section-title {
+      color: #365C32;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .section-subtitle {
+        color: #6c757d;
+        margin-top: -25px;
+        margin-bottom: 40px;
+    }
+
+    /* --- Promo Buttons Section Styles --- */
+    .promo-buttons {
+      background-color: #365C32;
+      padding: 30px 0;
+    }
+    .promo-button {
+      background-color: #ffffff;
+      color: #365C32;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100px;
+      height: 100%;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+    .promo-button:hover {
+      color: #365C32;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    }
+    .promo-button i {
+      font-size: 1.5rem;
+      margin-right: 15px;
+    }
+    
+    /* --- Core Treatments Section (Static cards) --- */
+    .treatment-card {
+        background-color: #ffffff;
+        border: 1px solid #e9e9e9;
+        border-radius: 8px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        text-align: center;
+        padding: 20px;
+    }
+    .treatment-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .treatment-card .icon {
+        font-size: 3rem;
+        color: #DDB95A;
+        margin-bottom: 15px;
+    }
+    .treatment-card h5 {
+        color: #365C32;
+        font-weight: 600;
+    }
+    .btn-outline-brand {
+        color: #365C32;
+        border-color: #365C32;
+        border-radius: 20px;
+    }
+    .btn-outline-brand:hover {
+        background-color: #365C32;
+        color: white;
+    }
+    
+    /* --- Why Choose Us Section --- */
+    .why-choose-us .feature-box {
+        text-align: center;
+        padding: 20px;
+    }
+    .why-choose-us .feature-box i {
+        font-size: 2.5rem;
+        color: #365C32;
+    }
+    .why-choose-us .feature-box h5 {
+        margin-top: 15px;
+        font-weight: 600;
+        color: #4A4A4A;
+    }
+
+    /* --- Treatments Carousel Section --- *//* --- REVISED Treatments Carousel Section CSS --- */
+
+#treatment-carousel-section {
+    position: relative;
+    padding: 60px 0;
+    /* 1. NEW BACKGROUND IMAGE URL */
+    background-image: url('/images/Shadow\ Play\ 513-A12\ Milk\ Chocolate\ by\ Maywood\ Studio.jpg'); 
+    background-size: cover;
+    background-attachment: fixed; /* This creates the cool parallax scroll effect */
+    background-position: center;
+    z-index: 1;
+  }
+
+  #treatment-carousel-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 2. SLIGHTLY LIGHTER OVERLAY (changed 0.9 to 0.85) */
+    background-color: rgba(54, 92, 50, 0.85); 
+    z-index: -1;
+  }
+
+  /* (No changes needed to the rest of the styles for this section) */
+  .treatment-swiper {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+  /* ... etc ... */
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 10px; /* Add padding for shadow visibility */
+    }
+    .treatment-card-carousel {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 30px 25px;
+      text-align: center;
+      border: 1px solid #e9e9e9;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .treatment-card-carousel:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    /* ADD THIS NEW RULE for the images */
+  .treatment-card-img {
+      width: 120px;            /* Sets a fixed width */
+      height: 120px;           /* Sets a fixed height */
+      border-radius: 50%;      /* Makes the image circular */
+      object-fit: cover;       /* Prevents image distortion */
+      margin: 0 auto 20px;     /* Centers the image and adds space below */
+      border: 3px solid #ffffff; /* Adds a nice white border */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow */
+  }
+    .treatment-card-carousel h5 {
+      color: #365C32;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+      /* ADD THIS: Makes the paragraph take up space to push the button down */
+  .treatment-card-carousel p {
+      flex-grow: 1; /* This ensures the button aligns at the bottom */
+      margin-bottom: 20px;
+  }
+    /* --- Testimonials Section (REVISED) --- */
+  .testimonial-section {
+      background-color: #F7F6F1; /* Using the main body background for a seamless look */
+  }
+
+  .testimonial-swiper {
+      padding: 20px 0 50px 0; /* Add padding for shadows and pagination */
+  }
+
+  .testimonial-card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 40px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+      text-align: center;
+      border-top: 4px solid #DDB95A; /* Gold accent */
+      margin: 0 15px; /* Add some margin for spacing */
+      height: 95%; /* Make cards same height */
+      display: flex;
+      flex-direction: column;
+  }
+
+  .testimonial-card .fa-quote-left {
+      font-size: 2.5rem;
+      color: #365C32; /* Main Green */
+      margin-bottom: 20px;
+  }
+
+  .testimonial-text {
+      font-style: italic;
+      color: #6A6A6A;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      flex-grow: 1; /* Pushes author to the bottom */
+  }
+
+  .testimonial-author {
+      margin-top: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .author-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 15px;
+      border: 3px solid #e2f0e1;
+  }
+
+  .author-name {
+      font-weight: 700;
+      color: #365C32;
+      margin: 0;
+  }
+
+  /* Swiper Controls Styling */
+  .testimonial-swiper .swiper-pagination-bullet {
+      background-color: #365C32;
+      width: 10px;
+      height: 10px;
+  }
+  .testimonial-swiper .swiper-pagination-bullet-active {
+      background-color: #DDB95A;
+  }
+
+  .testimonial-swiper .swiper-button-next,
+  .testimonial-swiper .swiper-button-prev {
+      color: #365C32; /* Main Green */
+      transition: color 0.3s;
+  }
+  .testimonial-swiper .swiper-button-next:hover,
+  .testimonial-swiper .swiper-button-prev:hover {
+      color: #DDB95A; /* Gold on hover */
+  }
+  /* Media query to hide arrows on mobile */
+  @media (max-width: 767px) {
+      .testimonial-swiper .swiper-button-next,
+      .testimonial-swiper .swiper-button-prev {
+          display: none;
+      }
+  }
+  /* ADD THIS: The style for our new button */
+  .btn-card {
+      background-color: #365C32; /* Main green color */
+      color: #ffffff;
+      border-radius: 50px; /* Fully rounded corners */
+      padding: 10px 25px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 0.9em;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+      border: 1px solid transparent;
+  }
+
+  .btn-card:hover {
+      background-color: #DDB95A; /* Gold color on hover */
+      color: #365C32; /* Dark green text on hover */
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+    .swiper-pagination-bullet {
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 10px;
+      height: 10px;
+      opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: #ffffff;
+    }
+    
+    /* --- Appointment Form Section --- */
+    .appointment-form {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+    /* --- Modern Team Section (REVISED) --- */
+  .team-section {
+      background-color: #ffffff; /* A clean white background for this section */
+  }
+
+  .team-card {
+      position: relative;
+      overflow: hidden; /* This is crucial for the overlay effect */
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: pointer;
+  }
+
+  .team-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  }
+
+  .team-card-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s ease;
+  }
+
+  .team-card:hover .team-card-img img {
+      transform: scale(1.1); /* Zoom in effect on the image */
+  }
+
+  .team-card-body {
+      padding: 25px;
+      text-align: center;
+      background-color: #fff;
+      position: relative; /* Ensures this stays on top of the image */
+      z-index: 2;
+  }
+
+  .team-title {
+      color: #365C32; /* Main Green */
+      font-weight: 700;
+      margin-bottom: 5px;
+  }
+
+  .team-specialty {
+      color: #6c757d;
+      font-size: 0.95rem;
+  }
+
+  /* The Overlay that appears on hover */
+  .team-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(54, 92, 50, 0.95), rgba(84, 138, 79, 0.8)); /* Green gradient */
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      z-index: 3;
+      opacity: 0; /* Initially hidden */
+      transform: translateY(30px); /* Start slightly below */
+      transition: all 0.4s ease-in-out;
+  }
+
+  .team-card:hover .team-card-overlay {
+      opacity: 1; /* Make it visible on hover */
+      transform: translateY(0); /* Slide it into place */
+  }
+
+  .overlay-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+  }
+
+  .overlay-text {
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 20px;
+  }
+
+  .team-card-overlay .btn-outline-light {
+      border-color: #DDB95A;
+      color: #DDB95A;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+  }
+
+  .team-card-overlay .btn-outline-light:hover {
+      background-color: #DDB95A;
+      color: #365C32; /* Dark green text on hover */
+  }
+    /* --- Footer Styles --- */
+    .footer {
+      background-color: #365C32;
+      color: #E3DFC9;
+    }
+    .footer h5 {
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+    .footer a {
+      color: #E3DFC9;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+    .footer .social-icons a {
+      margin-right: 15px;
+      font-size: 1.5rem;
+    }
+    .back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #365C32;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.4s;
+    }
+    .back-to-top i {
+    font-size: 24px;
+    color: #fff;
+    line-height: 0;
+    }
+    .back-to-top:hover {
+    background: #DDB95A;
+    }
+    .back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+    }
+
+      /* --- WhatsApp Floating Button --- */
+  .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 90px;
+      right: 15px;
+      background-color: #25D366; /* Official WhatsApp Green */
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      animation: pulse 2.5s infinite; /* The pulse animation */
+  }
+
+  .whatsapp-float:hover {
+      transform: scale(1.1);
+      animation-play-state: paused; /* Pause animation on hover */
+      box-shadow: 4px 4px 15px rgba(0,0,0,0.3);
+  }
+
+  .whatsapp-float .tooltip-text {
+      visibility: hidden;
+      opacity: 0;
+      width: 120px;
+      background-color: #365C32; /* Your site's main green */
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px 0;
+      position: absolute;
+      z-index: 1;
+      right: 75px; /* Position to the left of the button */
+      font-size: 0.9rem;
+      transition: visibility 0.2s, opacity 0.2s ease-in-out;
+      white-space: nowrap; /* Keep text on one line */
+  }
+
+  .whatsapp-float:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+  }
+
+  /* Pulse Animation Keyframes */
+  @keyframes pulse {
+      0% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+      70% {
+          transform: scale(1);
+          box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+      }
+      100% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+  }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Ayurveda Clinic</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="treatment.html">Treatments</a></li>
+          <li class="nav-item"><a class="nav-link" href="onlineconsultation.html">Consultation</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <a class="btn btn-brand ms-3" href="appointment.html">Book Appointment</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Carousel -->
+  <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background-image: url('/images/front-view-cinnamon-mint-alogn-with-fresh-tea-white-ingredients-spices-color.jpg');">
+        <div class="overlay d-flex align-items-center">
+          <div class="container text-white text-center">
+            <h1 class="display-4">Best Ayurveda Hospital in Calicut</h1>
+            <p class="lead">Authentic care with a traditional and scientific approach to holistic healing.</p>
+            <a href="onlineconsultation.html" class="btn btn-brand">Consult Online</a>
+          </div>
+        </div>
+      </div>
+      <!-- FIXED: Added a valid URL for the second image -->
+      <div class="carousel-item" style="background-image: url('/images/close-up-bowl-with-plants.jpg');">
+        <div class="overlay d-flex align-items-center">
+          <div class="container text-white text-center">
+            <h1 class="display-4">Healing from Within</h1>
+            <p class="lead">Discover personalized Ayurvedic treatments for your health and well-being.</p>
+            <a href="treatment.html" class="btn btn-outline-light">Explore Treatments</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+  </div>
+
+  <!-- Three Promo Buttons Section -->
+  <section class="promo-buttons">
+      <div class="container">
+          <div class="row g-4">
+              <div class="col-lg-4">
+                  <div class="promo-button">
+                      <i class="fas fa-star"></i>
+                      <span>Best Ayurveda Hospital<br>in Calicut with 4.9 Google Rating</span>
+                  </div>
+              </div>
+              <div class="col-lg-4">
+                  <a href="onlineconsultation.html" class="promo-button">
+                      <i class="fas fa-video"></i>
+                      <span>Book an Online Doctor Consultation</span>
+                  </a>
+              </div>
+              <div class="col-lg-4">
+                  <div class="promo-button">
+                      <i class="fas fa-file-invoice-dollar"></i>
+                      <span>Health Insurance<br>Reimbursement Medical Care</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-5">
+    <div class="container py-5" data-aos="fade-up">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2 class="section-title">Welcome to Ayurveda Clinic</h2>
+          <p class="lead">Your sanctuary for authentic Ayurvedic healing in the heart of Calicut.</p>
+          <p>We are dedicated to delivering exceptional clinical outcomes through our "Sampoorna Chikitsa Ayurveda Sampradaya" — the authentic root-cause diagnosis and treatment process. Recognized by our patients as a leading Ayurveda Hospital in Kozhikode, we offer top-notch facilities combined with compassionate, personalized care.</p>
+          <a href="about.html" class="btn btn-outline-brand mt-3">Learn More About Us</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="/images/Ancient Siddha Healing Ritual.jpg" alt="Peaceful clinic interior with plants and natural light" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Treatments Section (Static) -->
+  <section id="treatments" class="py-5 bg-light">
+      <div class="container">
+          <div class="text-center">
+              <h2 class="section-title">Our Core Treatments</h2>
+              <p class="section-subtitle">We offer a range of authentic Ayurvedic therapies to restore balance and health.</p>
+          </div>
+          <div class="row g-4">
+              <div class="col-lg-4 col-md-6">
+                  <div class="treatment-card">
+                      <div class="icon"><i class="fas fa-spa"></i></div>
+                      <h5>Panchakarma</h5>
+                      <p>A comprehensive detoxification and rejuvenation program to purify the body and mind.</p>
+                      <a href="treatment.html#panchakarma" class="btn btn-card">Learn More <i class="fas fa-arrow ms-2"></i></a>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                  <div class="treatment-card">
+                      <div class="icon"><i class="fas fa-leaf"></i></div>
+                      <h5>Abhyanga</h5>
+                      <p>A traditional full-body massage with medicated oils to improve circulation and relieve stress.</p>
+                      <a href="treatment.html#abhyanga" class="btn btn-card">Learn More <i class="fas fa-arrow"></i></a>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                  <div class="treatment-card">
+                      <div class="icon"><i class="fas fa-tint"></i></div>
+                      <h5>Shirodhara</h5>
+                      <p>A calming therapy where a continuous stream of warm oil is poured over the forehead.</p>
+                      <a href="treatment.html#shirodhara" class="btn btn-card">Learn More <i class="fas fa-arrow ms-2"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-5 why-choose-us">
+      <div class="container">
+          <div class="text-center">
+              <h2 class="section-title">Why Choose Ayurveda Clinic?</h2>
+          </div>
+          <div class="row g-4 text-center mt-4">
+              <div class="col-lg-3 col-md-6 feature-box" data-aos="fade-up" data-aos-delay="100">
+                  <i class="fas fa-user-md"></i>
+                  <h5 class="mt-2">Experienced Doctors</h5>
+                  <p>Our team consists of highly qualified and seasoned Ayurvedic physicians.</p>
+              </div>
+              <div class="col-lg-3 col-md-6 feature-box" data-aos="fade-up" data-aos-delay="200">
+                  <i class="fas fa-certificate"></i>
+                  <h5 class="mt-2">Authentic Therapies</h5>
+                  <p>We use traditional methods and high-quality, genuine herbal preparations.</p>
+              </div>
+              <div class="col-lg-3 col-md-6 feature-box"  data-aos="fade-up" data-aos-delay="300">
+                  <i class="fas fa-hand-holding-medical"></i>
+                  <h5 class="mt-2">Personalized Care</h5>
+                  <p>Every treatment plan is customized to your unique body constitution and needs.</p>
+              </div>
+              <div class="col-lg-3 col-md-6 feature-box" data-aos="fade-up" data-aos-delay="400">
+                  <i class="fas fa-star"></i>
+                  <h5 class="mt-2">Highest Patient Satisfaction</h5>
+                  <p>We are proud of our 4.9+ Google rating and positive patient testimonials.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- REVISED: Ayurvedic Treatments Carousel Section with Images -->
+  <section id="treatment-carousel-section" data-aos="fade-in">
+      <div class="container">
+          <div class="text-center">
+              <h2 class="section-title text-white">Ayurvedic Treatments</h2>
+              <p class="section-subtitle text-white-50">Explore our authentic therapies for holistic well-being.</p>
+          </div>
+
+          <!-- Swiper -->
+          <div class="swiper treatment-swiper">
+              <div class="swiper-wrapper">
+
+                  <!-- Slide 1: Ilakkizhi Therapy -->
+                  <div class="swiper-slide">
+                      <div class="treatment-card-carousel">
+                          <!-- Image instead of icon -->
+                          <img src="/images/treatments/Ilakkizhi Therapy.png" alt="Ilakkizhi herbal poultice" class="treatment-card-img">
+                          <h5>Ilakkizhi Therapy</h5>
+                          <p>A rejuvenating massage using herbal poultices to relieve pain, inflammation, and stiffness.</p>
+                          <a href="treatment.html" class="btn btn-card">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                      </div>
+                  </div>
+
+                  <!-- Slide 2: Karkidaka Chikitsa -->
+                  <div class="swiper-slide">
+                      <div class="treatment-card-carousel">
+                          <!-- Image instead of icon -->
+                          <img src="/images/treatments/Karkidaka Chikitsa.jpg" alt="Monsoon wellness therapy" class="treatment-card-img">
+                          <h5>Karkidaka Chikitsa</h5>
+                          <p>A specialized monsoon regimen to detoxify the body and boost immunity during the rainy season.</p>
+                          <a href="treatment.html" class="btn btn-card">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                      </div>
+                  </div>
+
+                  <!-- Slide 3: Virechana Therapy -->
+                  <div class="swiper-slide">
+                      <div class="treatment-card-carousel">
+                          <!-- Image instead of icon -->
+                          <img src="/images/treatments/Virechana therapy.jpg" alt="Herbal ingredients for therapy" class="treatment-card-img">
+                          <h5>Virechana Therapy</h5>
+                          <p>A medicated purgation therapy that cleanses the gastrointestinal tract and eliminates toxins.</p>
+                          <a href="treatment.html" class="btn btn-card">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                      </div>
+                  </div>
+
+                  <!-- Slide 4: Ayurvedic Facial -->
+                  <div class="swiper-slide">
+                      <div class="treatment-card-carousel">
+                          <!-- Image instead of icon -->
+                          <img src="/images/treatments/Ayurvedic Facial.jpg" alt="Natural Ayurvedic facial" class="treatment-card-img">
+                          <h5>Ayurvedic Facial</h5>
+                          <p>A natural, herbal facial treatment to cleanse, nourish, and rejuvenate the skin for a healthy glow.</p>
+                          <a href="treatment.html" class="btn btn-card">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                      </div>
+                  </div>
+
+                  <!-- Slide 5: Ayurvedic Psychiatry -->
+                  <div class="swiper-slide">
+                      <div class="treatment-card-carousel">
+                          <!-- Image instead of icon -->
+                          <img src="/images/treatments/Ayurvedic Psychiatry.jpg" alt="Peaceful meditation for mental health" class="treatment-card-img">
+                          <h5>Ayurvedic Psychiatry</h5>
+                          <p>Holistic management of mental health concerns through counseling, herbs, and therapies.</p>
+                          <a href="treatment.html" class="btn btn-card">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                      </div>
+                  </div>
+
+                  <!-- Slide 6: Snehapana Therapy -->
+                  <div class="swiper-slide">
+                      <div class="treatment-card-carousel">
+                          <!-- Image instead of icon -->
+                          <img src="https://images.unsplash.com/photo-1617871234255-f2d40131e51b?w=500" alt="Medicated ghee for Snehapana" class="treatment-card-img">
+                          <h5>Snehapana Therapy</h5>
+                          <p>An internal oleation process involving the consumption of medicated ghee to prepare for detox.</p>
+                          <a href="treatment.html" class="btn btn-card">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                      </div>
+                  </div>
+
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Testimonials Section -->
+
+  <section class="testimonial-section py-5">
+      <div class="container" data-aos="fade-up">
+          <div class="text-center">
+              <h2 class="section-title">What Our Patients Say</h2>
+              <p class="section-subtitle">Their healing journeys are our greatest reward.</p>
+          </div>
+
+          <!-- Swiper -->
+          <div class="swiper testimonial-swiper">
+              <div class="swiper-wrapper">
+
+                  <!-- Testimonial Slide 1 -->
+                  <div class="swiper-slide">
+                      <div class="testimonial-card">
+                          <i class="fas fa-quote-left"></i>
+                          <p class="testimonial-text">"Complete relief from my chronic back pain within weeks. The doctors and staff at Ayurveda Clinic truly changed my life! The personalized care is second to none."</p>
+                          <div class="testimonial-author">
+                              <!-- <img src="/images/patient1.jpg" alt="Patient Rajesh K." class="author-img"> -->
+                              <h5 class="author-name">– Rajesh K.</h5>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Testimonial Slide 2 -->
+                  <div class="swiper-slide">
+                      <div class="testimonial-card">
+                          <i class="fas fa-quote-left"></i>
+                          <p class="testimonial-text">"A wonderfully natural, effective, and holistic approach to healthcare. I highly recommend their personalized treatments and the serene atmosphere of the clinic."</p>
+                          <div class="testimonial-author">
+                              <!-- <img src="/images/patient2.jpg" alt="Patient Anjali M." class="author-img"> -->
+                              <h5 class="author-name">– Anjali M.</h5>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Testimonial Slide 3 -->
+                  <div class="swiper-slide">
+                      <div class="testimonial-card">
+                          <i class="fas fa-quote-left"></i>
+                          <p class="testimonial-text">"The Karkidaka Chikitsa was a rejuvenating experience. I felt completely refreshed and energized. The team is incredibly knowledgeable and supportive."</p>
+                          <div class="testimonial-author">
+                              <!-- <img src="/images/patient3.jpg" alt="Patient Priya S." class="author-img"> -->
+                              <h5 class="author-name">– Priya S.</h5>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+
+              <!-- Add Navigation -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Team Section -->
+  <!-- REVISED: Modern Team Section -->
+  <section class="team-section py-5">
+      <div class="container" data-aos="fade-up">
+          <div class="text-center mb-5">
+              <h2 class="section-title">Meet Our Vaidyas</h2>
+              <p class="section-subtitle">The experienced and compassionate hands behind your healing journey.</p>
+          </div>
+
+          <div class="row g-4 justify-content-center">
+
+              <!-- Doctor 1: Dr. Jayaprakash -->
+              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                  <div class="team-card">
+                      <div class="team-card-img">
+                          <img src="/images/male doc.jpg" alt="Dr. Jayaprakash, Chief Physician">
+                      </div>
+                      <div class="team-card-body">
+                          <h4 class="team-title">Dr. Jayaprakash</h4>
+                          <p class="team-specialty">Chief Physician, BAMS</p>
+                      </div>
+                      <div class="team-card-overlay">
+                          <h4 class="overlay-title">Dr. Jayaprakash</h4>
+                          <p class="overlay-text">With over 20 years of experience, Dr. Jayaprakash is a master of root-cause diagnostics and traditional Ayurvedic practices.</p>
+                          <a href="appointment.html" class="btn btn-outline-light">Book Appointment</a>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Doctor 2: Dr. Anu Lakshmi -->
+              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                  <div class="team-card">
+                      <div class="team-card-img">
+                          <img src="/images/lady doc.jpg" alt="Dr. Anu Lakshmi, Panchakarma Specialist">
+                      </div>
+                      <div class="team-card-body">
+                          <h4 class="team-title">Dr. Anu Lakshmi</h4>
+                          <p class="team-specialty">Panchakarma Specialist, MD(Ayu)</p>
+                      </div>
+                      <div class="team-card-overlay">
+                          <h4 class="overlay-title">Dr. Anu Lakshmi</h4>
+                          <p class="overlay-text">Dr. Lakshmi is an expert in detoxification and rejuvenation therapies, specializing in personalized Panchakarma treatments.</p>
+                          <a href="appointment.html" class="btn btn-outline-light">Book Appointment</a>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Doctor 3: Dr. Gouri Shanker -->
+              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                  <div class="team-card">
+                      <div class="team-card-img">
+                          <img src="/images/male doc.jpg" alt="Dr. Gouri Shanker, Wellness Consultant">
+                      </div>
+                      <div class="team-card-body">
+                          <h4 class="team-title">Dr. Gouri Shanker</h4>
+                          <p class="team-specialty">Wellness Consultant, BAMS</p>
+                      </div>
+                      <div class="team-card-overlay">
+                          <h4 class="overlay-title">Dr. Gouri Shanker</h4>
+                          <p class="overlay-text">Dr. Shanker focuses on holistic lifestyle management and preventive care through diet, yoga, and herbal medicine.</p>
+                          <a href="appointment.html" class="btn btn-outline-light">Book Appointment</a>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer pt-5 pb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4"><h5>Ayurveda Clinic</h5><p>Your trusted partner in holistic health and wellness, providing authentic Ayurvedic treatments in Calicut, Kerala.</p></div>
+            <div class="col-lg-2 col-md-6 mb-4"><h5>Quick Links</h5><ul class="list-unstyled"><li><a href="about.html">About Us</a></li><li><a href="treatment.html">Treatments</a></li><li><a href="#appointment">Appointment</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+            <div class="col-lg-3 col-md-6 mb-4"><h5>Contact Info</h5><ul class="list-unstyled"><li><i class="fas fa-map-marker-alt me-2"></i> 123 Clinic Road, Calicut, Kerala</li><li><li><i class="fas fa-phone me-2"></i> <a href="tel:04952766717">0495-2766717</a></li><i class="fas fa-envelope me-2"></i> info@tatvaayurved.com</li></ul></div>
+            <div class="col-lg-3 col-md-6 mb-4"><h5>Follow Us</h5><div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+        </div>
+        <hr class="my-4">
+        <div class="text-center"><p>© 2025 Ayurveda Clinic. All Rights Reserved. Designed by Fariz motionvix.</p></div>
+    </div>
+
+    <!-- Back to Top Button -->
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></a>
+  </footer>
+
+  <a href="https://wa.me/911234567890" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+    <span class="tooltip-text">Chat with us!</span>
+</a>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    // Initialize AOS
+    AOS.init({
+        duration: 800, // values from 0 to 3000, with step 50ms
+        once: true, // whether animation should happen only once - while scrolling down
+    });
+    </script>
+    
+  <!-- SCRIPT LIBRARIES (Corrected Order) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- YOUR CUSTOM SCRIPTS -->
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Initialize Swiper for the treatment carousel
+    const swiper = new Swiper('.treatment-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            768: { slidesPerView: 2, spaceBetween: 30 },
+            992: { slidesPerView: 3, spaceBetween: 40 }
+        }
+    });
+
+    // Inside your main script tag
+    const backToTopButton = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+        backToTopButton.classList.add('active');
+    } else {
+        backToTopButton.classList.remove('active');
+    }
+    });
+
+        // Inside your main script tag, after the treatment swiper initialization
+
+    // Initialize Swiper for the testimonial carousel
+    const testimonialSwiper = new Swiper('.testimonial-swiper', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 3000, // 5 seconds delay between slides
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            // when window width is >= 992px
+            992: {
+                slidesPerView: 2,
+                spaceBetween: 40
+            }
+        }
+    });
+  </script>
+
+</body>
+</html>

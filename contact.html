@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Ayurveda Clinic</title>
+  <!-- These are the same links from index.html -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Link to your existing stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Add a little style for the map */
+    .map-container {
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    }
+    .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar (Same as previous pages) -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Ayurveda Clinic</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="treatment.html">Treatments</a></li>
+          <li class="nav-item"><a class="nav-link" href="onlineconsultation.html">Consultation</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <a class="btn btn-brand ms-3" href="index.html#appointment">Book Appointment</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="py-5 text-center text-white" style="background-color: #365C32;">
+    <div class="container">
+      <h1 class="display-4">Get In Touch</h1>
+      <p class="lead">We're here to help. Reach out to us with any questions or to schedule your visit.</p>
+    </div>
+  </section>
+
+  <!-- Contact Details & Form Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Left Side: Contact Info & Hours -->
+        <div class="col-lg-5 mb-5">
+          <h2 class="section-title">Contact Information</h2>
+          <div class="d-flex mb-3">
+            <i class="fas fa-map-marker-alt fa-2x me-3 text-success"></i>
+            <div>
+              <strong>Address:</strong><br>
+              123 Clinic Road, Calicut, Kerala, 673001, India
+            </div>
+          </div>
+          <div class="d-flex mb-3">
+            <i class="fas fa-phone fa-2x me-3 text-success"></i>
+            <div>
+              <strong>Phone:</strong><br>
+              0495-2766717
+            </div>
+          </div>
+          <div class="d-flex mb-3">
+            <i class="fas fa-envelope fa-2x me-3 text-success"></i>
+            <div>
+              <strong>Email:</strong><br>
+              info@tatvaayurved.com
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <h3 class="section-title fs-4">Business Hours</h3>
+          <p><strong>Monday - Saturday:</strong> 9:00 AM - 6:00 PM</p>
+          <p><strong>Sunday:</strong> Closed</p>
+        </div>
+
+        <!-- Right Side: Contact Form -->
+        <div class="col-lg-7">
+            <div class="appointment-form">
+                <h2 class="section-title text-center">Send Us a Message</h2>
+                <form>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="contactName" class="form-label">Full Name</label>
+                      <input type="text" class="form-control" id="contactName" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="contactPhone" class="form-label">Phone Number</label>
+                      <input type="tel" class="form-control" id="contactPhone" required>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="contactEmail" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="contactEmail" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="contactSubject" class="form-label">Subject</label>
+                    <input type="text" class="form-control" id="contactSubject" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="contactMessage" class="form-label">Your Message</label>
+                    <textarea class="form-control" id="contactMessage" rows="5" required></textarea>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-brand">Send Message</button>
+                  </div>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Map Section -->
+  <section>
+    <div class="container-fluid p-0">
+        <div class="map-container">
+            <!-- IMPORTANT: Replace this with your client's Google Maps embed code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.137819448057!2d75.7828238152438!3d11.251410192000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6593747514755%3A0x337a72a08c5c3e53!2sKozhikode%2C%20Kerala!5e0!3m2!1sen!2sin!4v1672548812345!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+  </section>
+
+
+  <!-- Footer (Same as previous pages) -->
+  <footer class="footer pt-5 pb-4">
+    <!-- ... Paste your full footer code here ... -->
+    <div class="container">
+      <div class="text-center">
+            <p>© 2025 Ayurveda Clinic. All Rights Reserved. Designed by You.</p>
+        </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
