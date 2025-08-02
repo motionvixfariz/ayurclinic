@@ -9,338 +9,260 @@
   <!-- CSS LIBRARIES -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 
-  <!-- YOUR CUSTOM STYLES -->
-  <style>
-    /* --- General Styles --- */
-    body {
-        font-family: 'Lato', sans-serif;
-        background-color: #F7F6F1;
-        color: #4A4A4A;
-    }
-
-    h1, h2, h3, h4, h5, h6, .navbar-brand, .btn {
-        font-family: 'Montserrat', sans-serif;
-    }
-    
-    .section-title {
-      color: #365C32;
-      font-weight: bold;
-      margin-bottom: 30px;
-    }
-
-    /* --- Navbar Styles (Slightly modified for non-home pages) --- */
-    .navbar {
-        background-color: #ffffff !important;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .navbar .navbar-brand,
-    .navbar .navbar-nav .nav-link {
-        color: #365C32 !important;
-    }
-    .navbar .btn-brand {
-        background-color: #365C32;
-        color: #ffffff;
-        border-radius: 20px;
-        padding: 8px 20px;
-        transition: background-color 0.3s, color 0.3s;
-    }
-    .navbar .btn-brand:hover {
-        background-color: #DDB95A;
-        color: #365C32;
-    }
-    .navbar .navbar-nav .nav-link:hover {
-        color: #DDB95A !important;
-    }
-
-    /* --- Appointment Section Styles --- */
-    .appointment-section {
-        padding: 80px 0;
-    }
-    .appointment-wrapper {
-        background-color: #ffffff;
-        border-radius: 15px;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-        overflow: hidden;
-    }
-    .appointment-info {
-        background-color: #365C32;
-        color: #ffffff;
-        padding: 40px;
-    }
-    .appointment-info h3 {
-        color: #ffffff;
-        font-weight: 700;
-        margin-bottom: 20px;
-    }
-    .appointment-info p {
-        color: #E3DFC9;
-    }
-    .appointment-info .info-item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-        color: #E3DFC9;
-    }
-    .appointment-info .info-item i {
-        font-size: 1.5rem;
-        color: #DDB95A;
-        width: 40px;
-    }
-
-    .appointment-form-wrapper {
-        padding: 40px;
-    }
-    .form-control {
-        border-radius: 8px;
-        padding: 12px 15px;
-        border: 1px solid #ced4da;
-    }
-    .form-control:focus {
-        border-color: #365C32;
-        box-shadow: 0 0 0 0.25rem rgba(54, 92, 50, 0.25);
-    }
-    .form-label {
-        font-weight: 600;
-        color: #4A4A4A;
-    }
-    .btn-submit {
-        background-color: #365C32;
-        color: #ffffff;
-        border-radius: 50px;
-        padding: 12px 35px;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        transition: all 0.3s ease;
-    }
-    .btn-submit:hover {
-        background-color: #DDB95A;
-        color: #365C32;
-        transform: translateY(-3px);
-    }
-    
-    /* --- Doctor Selection Card --- */
-    .doctor-card {
-        background-color: #f8f9fa;
-        border: 1px solid #e9e9e9;
-        border-radius: 10px;
-        padding: 20px;
-        text-align: center;
-        transition: transform 0.3s, box-shadow 0.3s;
-        height: 100%;
-    }
-    .doctor-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-    .doctor-card img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 15px;
-        border: 3px solid #ffffff;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .doctor-card h5 {
-        color: #365C32;
-        font-weight: 700;
-        margin-bottom: 5px;
-    }
-    .doctor-card .specialty {
-        color: #6c757d;
-        font-size: 0.9rem;
-        margin-bottom: 15px;
-    }
-    .form-check-input:checked {
-        background-color: #365C32;
-        border-color: #365C32;
-    }
-    .form-check-label {
-        font-weight: 600;
-    }
-
-    /* --- Footer (Same as original) --- */
-    .footer {
-        background-color: #365C32;
-        color: #E3DFC9;
-    }
-    .footer h5 { color: #ffffff; }
-    .footer a { color: #E3DFC9; text-decoration: none; }
-    .footer a:hover { color: #ffffff; }
-    .footer .social-icons a { margin-right: 15px; font-size: 1.5rem; }
-  </style>
+  <!-- LINK TO YOUR STYLESHEET -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Navbar -->
+  <!-- Navbar (Same as other pages) -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Ayurveda Clinic</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="treatment.html">Treatments</a></li>
-          <li class="nav-item"><a class="nav-link" href="onlineconsultation.html">Consultation</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-        <a class="btn btn-brand ms-3" href="appointment.html">Book Appointment</a>
+      <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+              <div class="logo-container">
+                  <img src="/images/logo-green.png" alt="Ayurveda Clinic Logo" class="logo-white">
+                  <img src="/images/logo-green.png" alt="Ayurveda Clinic Logo" class="logo-green">
+              </div>
+              <span class="brand-name">Ayurveda Clinic</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="treatment.html">Treatments</a></li>
+                  <li class="nav-item"><a class="nav-link" href="onlineconsultation.html">Consultation</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              </ul>
+              <!-- <a class="btn btn-brand ms-lg-3" href="appointment.html">Book Appointment</a> -->
+          </div>
       </div>
-    </div>
   </nav>
 
+  <!-- Page Header -->
+  <section class="page-header" style="background-image: url('/images/appointment-bg.jpg');">
+      <div class="container">
+          <div class="row">
+              <div class="col-12 text-center">
+                  <h1 class="page-title" data-aos="fade-down">Book an Appointment</h1>
+                  <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">Take the first step towards your well-being. We're here to help.</p>
+              </div>
+          </div>
+  </section>
+
   <!-- Main Appointment Section -->
-  <section class="appointment-section">
+  <section class="appointment-form-section py-5">
     <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-8">
+            <form action="https://formspree.io/f/xldljaqv" method="POST" class="appointment-form p-4 p-md-5" data-aos="fade-up">
 
-      <!-- Page Header -->
-      <div class="text-center mb-5">
-        <h1 class="section-title">Book Your Appointment</h1>
-        <p class="lead text-secondary">Follow the steps below to schedule your visit with us.</p>
-      </div>
+              <!-- Step 1: Choose Your Doctor -->
+              <div class="mb-5">
+                  <h3 class="form-step-title">1. Choose Your Doctor</h3>
+                  <div class="row g-3">
+                      <div class="col-md-4">
+                          <label class="doctor-select-card">
+                              <input type="radio" name="doctor" value="Dr. Shashi" class="d-none" checked>
+                              <div class="card-content">
+                                  <img src="/images/doctor-profile.jpg" alt="Dr. Shashi">
+                                  <h5>Dr. Shashi</h5>
+                                  <p class="specialty">Chief Physician</p>
+                              </div>
+                          </label>
+                      </div>
+                      <div class="col-md-4">
+                          <label class="doctor-select-card">
+                              <input type="radio" name="doctor" value="Dr. Anu Lakshmi" class="d-none">
+                              <div class="card-content">
+                                  <img src="/images/lady doc.jpg" alt="Dr. Anu Lakshmi">
+                                  <h5>Dr. Anu Lakshmi</h5>
+                                  <p class="specialty">Panchakarma Specialist</p>
+                              </div>
+                          </label>
+                      </div>
+                      <div class="col-md-4">
+                          <label class="doctor-select-card">
+                              <input type="radio" name="doctor" value="Dr. Gouri Shanker" class="d-none">
+                              <div class="card-content">
+                                  <img src="/images/doctor-profile.jpg" alt="Dr. Gouri Shanker">
+                                  <h5>Dr. Gouri Shanker</h5>
+                                  <p class="specialty">Wellness Consultant</p>
+                              </div>
+                          </label>
+                      </div>
+                  </div>
+              </div>
 
-      <div class="appointment-wrapper">
-        <div class="row g-0">
-          
-          <!-- Left Side: Info -->
-          <div class="col-lg-4 appointment-info d-none d-lg-block">
-            <h3>Contact Information</h3>
-            <p>If you have any questions or need immediate assistance, please feel free to reach out to us through the following channels.</p>
-            <div class="info-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>123 Clinic Road, Calicut, Kerala</span>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-phone"></i>
-              <span><a href="tel:0495-2766717" class="text-white text-decoration-none">0495-2766717</a></span>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-envelope"></i>
-              <span><a href="mailto:info@tatvaayurved.com" class="text-white text-decoration-none">info@tatvaayurved.com</a></span>
-            </div>
-             <div class="info-item">
-              <i class="fas fa-clock"></i>
-              <span>Mon - Sat: 9:00 AM - 6:00 PM</span>
-            </div>
-          </div>
-
-          <!-- Right Side: Form -->
-          <div class="col-lg-8 appointment-form-wrapper">
-                        <!-- PASTE THIS ENTIRE UPDATED FORM INTO appointment.html -->
-            <form action="https://formspree.io/f/xldljaqv" method="POST">
-
-                <!-- Step 1: Choose Your Doctor -->
-                <div class="mb-5">
-                    <h4 class="mb-4">1. Choose Your Doctor</h4>
-                    <div class="row g-3">
-                        <!-- Doctor 1 -->
-                        <div class="col-md-4">
-                            <div class="doctor-card">
-                                <img src="/images/male doc.jpg" alt="Dr. Jayaprakash">
-                                <h5>Dr. Jayaprakash</h5>
-                                <p class="specialty">Chief Physician</p>
-                                <div class="form-check">
-                                  <!-- ADDED name="doctor" -->
-                                  <input class="form-check-input" type="radio" name="doctor" id="doc1" value="Dr. Jayaprakash" checked>
-                                  <label class="form-check-label" for="doc1">Select</label>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Doctor 2 -->
-                        <div class="col-md-4">
-                            <div class="doctor-card">
-                                <img src="/images/lady doc.jpg" alt="Dr. Anu Lakshmi">
-                                <h5>Dr. Anu Lakshmi</h5>
-                                <p class="specialty">Panchakarma Specialist</p>
-                                <div class="form-check">
-                                  <!-- ADDED name="doctor" -->
-                                  <input class="form-check-input" type="radio" name="doctor" id="doc2" value="Dr. Anu Lakshmi">
-                                  <label class="form-check-label" for="doc2">Select</label>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Doctor 3 -->
-                        <div class="col-md-4">
-                            <div class="doctor-card">
-                                <img src="/images/male doc.jpg" alt="Dr. Gouri Shanker">
-                                <h5>Dr. Gouri Shanker</h5>
-                                <p class="specialty">Wellness Consultant</p>
-                                <div class="form-check">
-                                  <!-- ADDED name="doctor" -->
-                                  <input class="form-check-input" type="radio" name="doctor" id="doc3" value="Dr. Gouri Shanker">
-                                  <label class="form-check-label" for="doc3">Select</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 2: Your Details -->
-                <div class="mb-4">
-                    <h4 class="mb-4">2. Your Details</h4>
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="fullName" class="form-label">Full Name*</label>
-                            <!-- ADDED name="name" -->
-                            <input type="text" class="form-control" id="fullName" name="name" required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="phone" class="form-label">Phone Number*</label>
-                            <!-- ADDED name="phone" -->
-                            <input type="tel" class="form-control" id="phone" name="phone" required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="email" class="form-label">Email Address*</label>
-                            <!-- ADDED name="email" -->
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="appointmentDate" class="form-label">Preferred Date*</label>
-                            <!-- ADDED name="date" -->
-                            <input type="date" class="form-control" id="appointmentDate" name="date" required>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Reason for Visit (Optional)</label>
-                        <!-- ADDED name="message" -->
-                        <textarea class="form-control" id="message" name="message" rows="4"></textarea>
-                    </div>
-                </div>
-                
-                <div class="text-center">
-                    <button type="submit" class="btn btn-submit">Confirm Appointment</button>
-                </div>
-
+              <!-- Step 2: Your Details -->
+              <div>
+                  <h3 class="form-step-title">2. Your Details</h3>
+                  <div class="row g-4">
+                      <div class="col-md-6 form-floating">
+                          <input type="text" class="form-control" id="fullName" name="name" placeholder="Full Name" required>
+                          <label for="fullName">Full Name*</label>
+                      </div>
+                      <div class="col-md-6 form-floating">
+                          <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
+                          <label for="phone">Phone Number*</label>
+                      </div>
+                      <div class="col-md-6 form-floating">
+                          <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
+                          <label for="email">Email Address*</label>
+                      </div>
+                      <div class="col-md-6 form-floating">
+                          <input type="date" class="form-control" id="appointmentDate" name="date" placeholder="Preferred Date" required>
+                          <label for="appointmentDate">Preferred Date*</label>
+                      </div>
+                      <div class="col-12 form-floating">
+                           <textarea class="form-control" id="message" name="message" placeholder="Reason for Visit" style="height: 120px;"></textarea>
+                           <label for="message">Reason for Visit (Optional)</label>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="text-center mt-5">
+                  <button type="submit" class="btn btn-primary-hero">Confirm Appointment</button>
+              </div>
             </form>
-          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Section -->
+  <section class="py-5 bg-light-green">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon-trust"><i class="fas fa-user-shield"></i></div>
+          <h5 class="mt-3 fw-bold">100% Confidential</h5>
+          <p>Your privacy is our priority. All consultations and records are kept strictly confidential.</p>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon-trust"><i class="fas fa-user-md"></i></div>
+          <h5 class="mt-3 fw-bold">Expert Doctors</h5>
+          <p>You will be consulted by our team of highly experienced and compassionate Ayurvedic physicians.</p>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-icon-trust"><i class="fas fa-hand-holding-heart"></i></div>
+          <h5 class="mt-3 fw-bold">Personalized Care</h5>
+          <p>We listen to your concerns carefully to provide a treatment plan that is tailored specifically to you.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer pt-5 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4"><h5>Ayurveda Clinic</h5><p>Your trusted partner in holistic health and wellness, providing authentic Ayurvedic treatments in Calicut, Kerala.</p></div>
-            <div class="col-lg-2 col-md-6 mb-4"><h5>Quick Links</h5><ul class="list-unstyled"><li><a href="about.html">About Us</a></li><li><a href="treatment.html">Treatments</a></li><li><a href="appointment.html">Appointment</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-            <div class="col-lg-3 col-md-6 mb-4"><h5>Contact Info</h5><ul class="list-unstyled"><li><i class="fas fa-map-marker-alt me-2"></i> 123 Clinic Road, Calicut, Kerala</li><li><i class="fas fa-phone me-2"></i> 0495-2766717</li><li><i class="fas fa-envelope me-2"></i> info@tatvaayurved.com</li></ul></div>
-            <div class="col-lg-3 col-md-6 mb-4"><h5>Follow Us</h5><div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
-        </div>
-        <hr class="my-4">
-        <div class="text-center"><p>© 2025 Ayurveda Clinic. All Rights Reserved.</p></div>
-    </div>
-  </footer>
 
-  <!-- SCRIPT LIBRARIES -->
+<!-- 1. Pre-Footer Call to Action Section -->
+<section class="cta-footer">
+    <div class="container text-center">
+        <h2 class="cta-title">Ready to Begin Your Healing Journey?</h2>
+        <p class="cta-text">Book your consultation today and take the first step towards a healthier, more balanced you.</p>
+        <a href="appointment.html" class="btn btn-primary-hero">Book an Appointment</a>
+    </div>
+</section>
+
+<!-- 2. Main Footer -->
+<footer class="footer">
+    <!-- Curved Top Shape -->
+    <div class="footer-wave">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M1440,21.2101911 C1200,9.40339433 960,3.59660567 720,3.59660567 C480,3.59660567 240,9.40339433 0,21.2101911 L0,120 L1440,120 L1440,21.2101911 Z"></path>
+        </svg>
+    </div>
+
+    <div class="container">
+        <div class="row g-5">
+
+            <!-- Column 1: Brand Info -->
+            <div class="col-lg-4">
+                <a class="footer-brand" href="index.html">
+                    <img src="/images/logo-green.png" alt="Ayurveda Clinic Logo">
+                    <span>Ayurveda Clinic</span>
+                </a>
+                <p class="footer-mission">Your trusted partner in holistic health and wellness, providing authentic Ayurvedic treatments in Calicut.</p>
+                <div class="social-icons-footer">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="col-lg-2 col-md-4">
+                <h5>Explore</h5>
+                <ul class="list-unstyled">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="treatment.html">Treatments</a></li>
+                    <li><a href="appointment.html">Appointment</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact Info -->
+            <div class="col-lg-3 col-md-4">
+                <h5>Get in Touch</h5>
+                <ul class="list-unstyled">
+                    <li><a href="https://maps.google.com/?q=123+Clinic+Road,Calicut,Kerala" target="_blank"><i class="fas fa-map-marker-alt"></i>123 Clinic Road, Calicut</a></li>
+                    <li><a href="tel:0495-2766717"><i class="fas fa-phone"></i>0495-2766717</a></li>
+                    <li><a href="mailto:info@tatvaayurved.com"><i class="fas fa-envelope"></i>info@tatvaayurved.com</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Timings -->
+            <div class="col-lg-3 col-md-4">
+                <h5>Clinic Hours</h5>
+                <ul class="list-unstyled">
+                    <li>Mon - Sat: 9am - 6pm</li>
+                    <li>Sunday: Closed</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 3. Sub-Footer (Copyright Bar) -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>© 2025 Ayurveda Clinic. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>Designed with <i class="fas fa-heart" style="color:#DDB95A;"></i> by Fariz Motionvix</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+        duration: 800,
+        once: true,
+    });
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>

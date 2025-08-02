@@ -5,144 +5,310 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - Ayurveda Clinic</title>
-  <!-- These are the same links from index.html -->
+  
+  <!-- CSS LIBRARIES -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Link to your existing stylesheet -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- LINK TO YOUR NEW STYLESHEET -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <!-- Navbar (Same as index.html) -->
-  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Ayurveda Clinic</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="treatment.html">Treatments</a></li>
-          <li class="nav-item"><a class="nav-link" href="onlineconsultation.html">Consultation</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-        <a class="btn btn-brand ms-3" href="index.html#appointment">Book Appointment</a>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+              <div class="logo-container">
+                  <img src="/images/logo-white.png" alt="Ayurveda Clinic Logo" class="logo-white">
+                  <img src="/images/logo-green.png" alt="Ayurveda Clinic Logo" class="logo-green">
+              </div>
+              <span class="brand-name">Ayurveda Clinic</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="treatment.html">Treatments</a></li>
+                  <li class="nav-item"><a class="nav-link" href="onlineconsultation.html">Consultation</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              </ul>
+              <a class="btn btn-brand ms-lg-3" href="appointment.html">Book Appointment</a>
+          </div>
       </div>
-    </div>
   </nav>
 
-  <!-- Page Header -->
-  <section class="py-5 text-center text-white" style="background-color: #365C32;">
-    <div class="container">
-      <h1 class="display-4">About Our Clinic</h1>
-      <p class="lead">Discover our philosophy, our history, and the team dedicated to your well-being.</p>
-    </div>
+  <!-- Page Header with Parallax -->
+  <section class="page-header">
+      <div class="container">
+          <div class="row">
+              <div class="col-12 text-center">
+                  <h1 class="page-title" data-aos="fade-down">Our Healing Philosophy</h1>
+                  <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">Discover the story, mission, and people dedicated to your well-being.</p>
+              </div>
+          </div>
+      </div>
   </section>
 
   <!-- Our Story Section -->
   <section class="py-5">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <h2 class="section-title">Our Story</h2>
-          <p>Founded in [Year], Ayurveda Clinic was born from a desire to bring authentic, traditional Ayurvedic healing to the modern world. Our journey began with a small team of passionate vaidyas (physicians) who believed in a healthcare system that treats the root cause of illness, not just the symptoms.</p>
-          <p>Over the years, we have grown into a leading Ayurvedic center in Calicut, known for our unwavering commitment to patient care and classical treatment principles. We blend time-honored knowledge with evidence-based practices to create a healing environment that is both nurturing and effective.</p>
-        </div>
-        <div class="col-lg-6">
-          <img src="/images/person-conducting-reiki-therapy.jpg" alt="Clinic's exterior or a symbolic image" class="img-fluid rounded shadow">
-        </div>
+      <div class="container py-5">
+          <div class="row align-items-center">
+              <div class="col-lg-6" data-aos="fade-right">
+                  <div class="about-image-composition">
+                      <img src="/images/Ancient Siddha Healing Ritual.jpg" alt="A serene treatment room at the Ayurveda clinic" class="img-main shadow">
+                      <img src="/images/treatments/Karkidaka Chikitsa.jpg" alt="High-quality Ayurvedic herbs and oils" class="img-secondary shadow">
+                  </div>
+              </div>
+              <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                  <h2 class="section-title">Our Story</h2>
+                  <p class="lead">Founded in 2005, Ayurveda Clinic was born from a desire to bring authentic, traditional Ayurvedic healing to the modern world.</p>
+                  <p>Our journey began with a small team of passionate vaidyas who believed in a healthcare system that treats the root cause of illness, not just the symptoms. Over the years, we have grown into a leading Ayurvedic center in Calicut, known for our unwavering commitment to patient care and classical treatment principles. We blend time-honored knowledge with evidence-based practices to create a healing environment that is both nurturing and effective.</p>
+              </div>
+          </div>
       </div>
-    </div>
   </section>
 
   <!-- Mission & Vision Section -->
-  <section class="py-5 bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 mb-4">
-          <div class="p-4 bg-white rounded shadow-sm h-100">
-            <h3 class="section-title text-center">Our Mission</h3>
-            <p>To provide accessible, authentic, and personalized Ayurvedic healthcare that empowers individuals to achieve optimal health and harmony in mind, body, and spirit. We strive to be a beacon of trust and compassion in our community.</p>
+  <section class="py-5" style="background-color: #2A4726;">
+      <div class="container text-white">
+          <div class="row">
+              <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-up">
+                  <div class="text-center p-4">
+                      <i class="fas fa-bullseye fa-3x text-gold mb-3"></i>
+                      <h3 class="mb-3">Our Mission</h3>
+                      <p class="opacity-75">To provide accessible, authentic, and personalized Ayurvedic healthcare that empowers individuals to achieve optimal health and harmony in mind, body, and spirit. We strive to be a beacon of trust and compassion in our community.</p>
+                  </div>
+              </div>
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                  <div class="text-center p-4">
+                      <i class="fas fa-eye fa-3x text-gold mb-3"></i>
+                      <h3 class="mb-3">Our Vision</h3>
+                      <p class="opacity-75">To be a center of excellence in Ayurveda, pioneering the integration of traditional healing wisdom with modern scientific understanding. We envision a healthier world where Ayurveda is an integral part of everyone's life.</p>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="col-md-6 mb-4">
-          <div class="p-4 bg-white rounded shadow-sm h-100">
-            <h3 class="section-title text-center">Our Vision</h3>
-            <p>To be recognized as a center of excellence in Ayurveda, pioneering the integration of traditional healing wisdom with modern scientific understanding. We envision a healthier world where Ayurveda is a respected and integral part of everyone's life.</p>
-          </div>
-        </div>
       </div>
-    </div>
-  </section>
-  
-  <!-- Team Section (Same as index.html for consistency) -->
-  <section class="py-5">
-    <div class="container">
-      <h3 class="text-center section-title">Meet Our Doctors</h3>
-      <div class="row g-4 justify-content-center">
-        <div class="col-lg-3 col-md-6 text-center">
-          <img src="https://via.placeholder.com/280x280.png?text=Dr.+Jayaprakash" alt="Dr. Jayaprakash" class="img-fluid rounded-circle shadow mb-3">
-          <h5 class="mb-1">Dr. Shashi</h5>
-          <p class="text-muted">Chief Physician</p>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <img src="https://via.placeholder.com/280x280.png?text=Dr.+Anu+Lakshmi" alt="Dr. Anu Lakshmi" class="img-fluid rounded-circle shadow mb-3">
-          <h5 class="mb-1">Dr. Anu Lakshmi</h5>
-          <p class="text-muted">Panchakarma Specialist</p>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <img src="https://via.placeholder.com/280x280.png?text=Dr.+Gouri+Shanker" alt="Dr. Gouri Shanker" class="img-fluid rounded-circle shadow mb-3">
-          <h5 class="mb-1">Dr. Gouri Shanker</h5>
-          <p class="text-muted">Wellness Consultant</p>
-        </div>
-      </div>
-    </div>
   </section>
 
-  <!-- Footer (Same as index.html) -->
-  <footer class="footer pt-5 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
-                <h5>Ayurveda Clinic</h5>
-                <p>Your trusted partner in holistic health and wellness, providing authentic Ayurvedic treatments in Calicut, Kerala.</p>
+  <!-- Clinic Features Section (Glassmorphism) -->
+  <section class="philosophy-section">
+      <div class="container py-5">
+          <div class="text-center text-white" data-aos="fade-up">
+              <h2 class="section-title text-white">Our Approach & Ambiance</h2>
+              <p class="section-subtitle text-white-50">An environment designed for healing and peace.</p>
+          </div>
+          <div class="row g-4 mt-4">
+              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                  <div class="glass-card text-center">
+                      <div class="glass-card-icon"><i class="fas fa-hand-sparkles"></i></div>
+                      <h5>Calm Ambiance</h5>
+                      <p>Our clinic is designed to be a tranquil sanctuary, promoting relaxation and peace from the moment you arrive.</p>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                  <div class="glass-card text-center">
+                      <div class="glass-card-icon"><i class="fas fa-pills"></i></div>
+                      <h5>Herbal Pharmacy</h5>
+                      <p>We maintain our own pharmacy with authentic, high-quality herbal preparations for your treatments.</p>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                  <div class="glass-card text-center">
+                      <div class="glass-card-icon"><i class="fas fa-book-open"></i></div>
+                      <h5>Patient Education</h5>
+                      <p>We empower you with the knowledge to maintain a healthy lifestyle long after your treatment is complete.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Team Section (Same as index.html) -->
+ <section class="team-section py-5">
+    <div class="container py-4" data-aos="fade-up">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Meet Our Vaidyas</h2>
+            <p class="section-subtitle">The experienced and compassionate hands behind your healing journey.</p>
+        </div>
+
+        <div class="row g-5 justify-content-center">
+
+            <!-- Doctor 1: Dr. Shashi -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="team-card">
+                    <div class="team-card-img">
+                        <img src="/images/doctor-profile.jpg" alt="Dr. Shashi, Chief Physician">
+                    </div>
+                    <div class="team-card-body">
+                        <h4 class="team-title">Dr. Shashi</h4>
+                        <p class="team-specialty">Chief Physician, BAMS</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                        <a href="appointment.html" class="btn btn-team-book">Book Appointment</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-2 col-md-6 mb-4">
-                <h5>Quick Links</h5>
+
+            <!-- Doctor 2: Dr. Anu Lakshmi -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="team-card">
+                    <div class="team-card-img">
+                        <img src="/images/lady doc.jpg" alt="Dr. Anu Lakshmi, Panchakarma Specialist">
+                    </div>
+                     <div class="team-card-body">
+                        <h4 class="team-title">Dr. Anu Lakshmi</h4>
+                        <p class="team-specialty">Panchakarma Specialist, MD(Ayu)</p>
+                         <div class="team-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                        <a href="appointment.html" class="btn btn-team-book">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctor 3: Dr. Gouri Shanker -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="team-card">
+                    <div class="team-card-img">
+                        <img src="/images/doctor-profile.jpg" alt="Dr. Gouri Shanker, Wellness Consultant">
+                    </div>
+                     <div class="team-card-body">
+                        <h4 class="team-title">Dr. Gouri Shanker</h4>
+                        <p class="team-specialty">Wellness Consultant, BAMS</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                        <a href="appointment.html" class="btn btn-team-book">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+ <!-- Footer -->
+
+<!-- 1. Pre-Footer Call to Action Section -->
+<section class="cta-footer">
+    <div class="container text-center">
+        <h2 class="cta-title">Ready to Begin Your Healing Journey?</h2>
+        <p class="cta-text">Book your consultation today and take the first step towards a healthier, more balanced you.</p>
+        <a href="appointment.html" class="btn btn-primary-hero">Book an Appointment</a>
+    </div>
+</section>
+
+<!-- 2. Main Footer -->
+<footer class="footer">
+    <!-- Curved Top Shape -->
+    <div class="footer-wave">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M1440,21.2101911 C1200,9.40339433 960,3.59660567 720,3.59660567 C480,3.59660567 240,9.40339433 0,21.2101911 L0,120 L1440,120 L1440,21.2101911 Z"></path>
+        </svg>
+    </div>
+
+    <div class="container">
+        <div class="row g-5">
+
+            <!-- Column 1: Brand Info -->
+            <div class="col-lg-4">
+                <a class="footer-brand" href="index.html">
+                    <img src="/images/logo-green.png" alt="Ayurveda Clinic Logo">
+                    <span>Ayurveda Clinic</span>
+                </a>
+                <p class="footer-mission">Your trusted partner in holistic health and wellness, providing authentic Ayurvedic treatments in Calicut.</p>
+                <div class="social-icons-footer">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="col-lg-2 col-md-4">
+                <h5>Explore</h5>
                 <ul class="list-unstyled">
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="treatment.html">Treatments</a></li>
-                    <li><a href="index.html#appointment">Appointment</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="appointment.html">Appointment</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <h5>Contact Info</h5>
+
+            <!-- Column 3: Contact Info -->
+            <div class="col-lg-3 col-md-4">
+                <h5>Get in Touch</h5>
                 <ul class="list-unstyled">
-                    <li><i class="fas fa-map-marker-alt me-2"></i> 123 Clinic Road, Calicut, Kerala</li>
-                    <li><i class="fas fa-phone me-2"></i> 0495-2766717</li>
-                    <li><i class="fas fa-envelope me-2"></i> info@tatvaayurved.com</li>
+                    <li><a href="https://maps.google.com/?q=123+Clinic+Road,Calicut,Kerala" target="_blank"><i class="fas fa-map-marker-alt"></i>123 Clinic Road, Calicut</a></li>
+                    <li><a href="tel:0495-2766717"><i class="fas fa-phone"></i>0495-2766717</a></li>
+                    <li><a href="mailto:info@tatvaayurved.com"><i class="fas fa-envelope"></i>info@tatvaayurved.com</a></li>
                 </ul>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <h5>Follow Us</h5>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+
+            <!-- Column 4: Timings -->
+            <div class="col-lg-3 col-md-4">
+                <h5>Clinic Hours</h5>
+                <ul class="list-unstyled">
+                    <li>Mon - Sat: 9am - 6pm</li>
+                    <li>Sunday: Closed</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 3. Sub-Footer (Copyright Bar) -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>© 2025 Ayurveda Clinic. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>Designed with <i class="fas fa-heart" style="color:#DDB95A;"></i> by Fariz Motionvix</p>
                 </div>
             </div>
         </div>
-        <hr class="my-4">
-        <div class="text-center">
-            <p>© 2025 Ayurveda Clinic. All Rights Reserved. Designed by You.</p>
-        </div>
     </div>
-  </footer>
+</footer>
 
+<!-- Back to Top Button -->
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></a>
+
+
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+        duration: 800,
+        once: true,
+    });
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>

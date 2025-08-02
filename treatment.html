@@ -5,155 +5,171 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ayurvedic Treatments - Ayurveda Clinic</title>
-  <!-- These are the same links from index.html -->
+  
+  <!-- CSS LIBRARIES -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Link to your existing stylesheet -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- LINK TO YOUR STYLESHEET -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Navbar (Same as previous pages) -->
-  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Ayurveda Clinic</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="treatment.html">Treatments</a></li>
-          <li class="nav-item"><a class="nav-link" href="onlineconsultation.html">Consultation</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-        <a class="btn btn-brand ms-3" href="index.html#appointment">Book Appointment</a>
+  <!-- Navbar (Same as other pages) -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+              <div class="logo-container">
+                  <img src="/images/logo-white.png" alt="Ayurveda Clinic Logo" class="logo-white">
+                  <img src="/images/logo-green.png" alt="Ayurveda Clinic Logo" class="logo-green">
+              </div>
+              <span class="brand-name">Ayurveda Clinic</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                  <li class="nav-item"><a class="nav-link active" href="treatment.html">Treatments</a></li>
+                  <li class="nav-item"><a class="nav-link" href="onlineconsultation.html">Consultation</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              </ul>
+              <a class="btn btn-brand ms-lg-3" href="appointment.html">Book Appointment</a>
+          </div>
       </div>
-    </div>
   </nav>
 
   <!-- Page Header -->
-  <section class="py-5 text-center text-white" style="background-color: #365C32;">
-    <div class="container">
-      <h1 class="display-4">Our Ayurvedic Treatments</h1>
-      <p class="lead">Holistic therapies designed to rejuvenate your body, mind, and soul.</p>
-    </div>
+  <section class="page-header" style="background-image: url('/images/treatments/Panchakarma.jpg');">
+      <div class="container">
+          <div class="row">
+              <div class="col-12 text-center">
+                  <h1 class="page-title" data-aos="fade-down">Our Ayurvedic Therapies</h1>
+                  <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">Holistic treatments designed to rejuvenate your body, mind, and soul.</p>
+              </div>
+          </div>
   </section>
 
-  <!-- Detailed Treatment Section 1: Panchakarma -->
-  <section id="panchakarma" class="py-5">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <img src="/images/treatments/Panchakarma.jpg" alt="Panchakarma therapy setting" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-lg-6">
-          <h2 class="section-title">Panchakarma: The Ultimate Detox</h2>
-          <p>Panchakarma is the cornerstone of Ayurvedic healing. It is a comprehensive series of five therapies designed to deeply cleanse, detoxify, and rejuvenate the body at a cellular level. This process removes deep-seated toxins (ama) and restores the natural balance of your doshas.</p>
-          <h5>Benefits Include:</h5>
-          <ul>
-            <li>Elimination of toxins and purification of the body.</li>
-            <li>Improved metabolism and digestive health.</li>
-            <li>Enhanced immunity and stress reduction.</li>
-            <li>Slowing of the aging process and rejuvenation of tissues.</li>
-          </ul>
+  <!-- Detailed Treatment Sections -->
+  <div class="treatment-details-container">
+    
+    <!-- Treatment 1: Panchakarma -->
+    <section id="panchakarma" class="treatment-item py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <img src="/images/treatments/Panchakarma.jpg" alt="Panchakarma therapy setting" class="img-fluid rounded shadow-lg">
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+            <h2 class="section-title">Panchakarma: The Ultimate Detox</h2>
+            <p>Panchakarma is the cornerstone of Ayurvedic healing. It is a comprehensive series of five therapies designed to deeply cleanse, detoxify, and rejuvenate the body at a cellular level, removing deep-seated toxins (ama) and restoring the natural balance of your doshas.</p>
+            <h5 class="benefits-title"><i class="fas fa-spa text-gold me-2"></i>Key Benefits:</h5>
+            <ul class="benefits-list">
+              <li><i class="fas fa-check"></i>Elimination of toxins and purification of the body.</li>
+              <li><i class="fas fa-check"></i>Improved metabolism and digestive health.</li>
+              <li><i class="fas fa-check"></i>Enhanced immunity and profound stress reduction.</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Detailed Treatment Section 2: Abhyanga -->
-  <section id="abhyanga" class="py-5 bg-light">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 order-lg-2">
-          <img src="/images/treatments/Abhyanga.jpg" alt="Abhyanga oil massage" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-lg-6 order-lg-1">
-          <h2 class="section-title">Abhyanga: Rhythmic Herbal Massage</h2>
-          <p>Abhyanga is a traditional Ayurvedic massage performed with warm, medicated herbal oils. The rhythmic, gentle strokes help to deeply penetrate the skin, relax the nervous system, and nourish the tissues. It is more than a massage; it's an act of self-love that promotes profound stability and warmth.</p>
-          <h5>Benefits Include:</h5>
-          <ul>
-            <li>Deep relaxation and stress relief.</li>
-            <li>Improved blood circulation and detoxification.</li>
-            <li>Softer, smoother skin and reduced signs of aging.</li>
-            <li>Better sleep and overall sense of well-being.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Detailed Treatment Section 3: Shirodhara -->
-  <section id="shirodhara" class="py-5">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <img src="/images/treatments/Shirodhara.jpg" alt="Shirodhara therapy" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-lg-6">
-          <h2 class="section-title">Shirodhara: A Stream of Tranquility</h2>
-          <p>Shirodhara is a unique and powerful therapy where a continuous stream of warm, medicated oil is gently poured over the forehead (the 'third eye'). This profoundly calming treatment works directly on the central nervous system, helping to quiet the mind and induce a state of deep meditation and peace.</p>
-          <h5>Benefits Include:</h5>
-          <ul>
-            <li>Relief from anxiety, insomnia, and mental fatigue.</li>
-            <li>Improved memory and concentration.</li>
-            - Alleviation of headaches and migraines.</li>
-            <li>Promotes a state of deep mental relaxation.</li>
-          </ul>
+    <!-- Treatment 2: Abhyanga -->
+    <section id="abhyanga" class="treatment-item py-5 bg-light-green">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+            <img src="/images/treatments/Abhyanga.jpg" alt="Abhyanga oil massage" class="img-fluid rounded shadow-lg">
+          </div>
+          <div class="col-lg-6 order-lg-1" data-aos="fade-right" data-aos-delay="100">
+            <h2 class="section-title">Abhyanga: Rhythmic Herbal Massage</h2>
+            <p>Abhyanga is a traditional massage performed with warm, medicated herbal oils. The rhythmic, gentle strokes help to deeply penetrate the skin, relax the nervous system, and nourish the tissues. It is an act of self-love that promotes profound stability and warmth.</p>
+            <h5 class="benefits-title"><i class="fas fa-leaf text-gold me-2"></i>Key Benefits:</h5>
+            <ul class="benefits-list">
+              <li><i class="fas fa-check"></i>Deep relaxation and lasting stress relief.</li>
+              <li><i class="fas fa-check"></i>Improved blood circulation and detoxification.</li>
+              <li><i class="fas fa-check"></i>Softer, smoother skin and reduced signs of aging.</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    
+    <!-- Treatment 3: Shirodhara -->
+    <section id="shirodhara" class="treatment-item py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <img src="/images/treatments/Shirodhara.jpg" alt="Shirodhara therapy" class="img-fluid rounded shadow-lg">
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+            <h2 class="section-title">Shirodhara: A Stream of Tranquility</h2>
+            <p>Shirodhara is a unique therapy where a continuous stream of warm, medicated oil is gently poured over the forehead (the 'third eye'). This profoundly calming treatment works directly on the central nervous system, helping to quiet the mind and induce deep peace.</p>
+            <h5 class="benefits-title"><i class="fas fa-tint text-gold me-2"></i>Key Benefits:</h5>
+            <ul class="benefits-list">
+              <li><i class="fas fa-check"></i>Powerful relief from anxiety, insomnia, and mental fatigue.</li>
+              <li><i class="fas fa-check"></i>Improved memory, focus, and concentration.</li>
+              <li><i class="fas fa-check"></i>Alleviation of headaches, migraines, and hypertension.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <!-- Speciality Clinics Section -->
-  <section class="py-5 bg-light">
+  <section class="specialty-clinics py-5">
     <div class="container">
-      <div class="text-center">
-        <h2 class="section-title">Our Speciality Clinics</h2>
-        <p class="section-subtitle">We provide specialized care for a range of health concerns.</p>
+      <div class="text-center text-white" data-aos="fade-up">
+        <h2 class="section-title text-white">Specialty Clinics</h2>
+        <p class="section-subtitle text-white-50">We provide specialized, result-oriented care for a range of health concerns.</p>
       </div>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-            <div class="treatment-card h-100">
-                <div class="icon"><i class="fas fa-bone"></i></div>
+      <div class="row g-4 mt-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="specialty-card">
+                <div class="specialty-icon"><i class="fas fa-bone"></i></div>
                 <h5>Pain Management</h5>
                 <p>Holistic solutions for joint pain, arthritis, back pain, and musculoskeletal issues.</p>
             </div>
         </div>
-        <div class="col-md-6 col-lg-4">
-            <div class="treatment-card h-100">
-                <div class="icon"><i class="fas fa-brain"></i></div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="specialty-card">
+                <div class="specialty-icon"><i class="fas fa-brain"></i></div>
                 <h5>Stress & Lifestyle</h5>
                 <p>Managing stress, anxiety, insomnia, and other lifestyle-related disorders.</p>
             </div>
         </div>
-        <div class="col-md-6 col-lg-4">
-            <div class="treatment-card h-100">
-                <div class="icon"><i class="fas fa-female"></i></div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="specialty-card">
+                <div class="specialty-icon"><i class="fas fa-female"></i></div>
                 <h5>Women's Health</h5>
                 <p>Specialized care for hormonal imbalances, PCOD, and menstrual disorders.</p>
             </div>
         </div>
-        <div class="col-md-6 col-lg-4">
-            <div class="treatment-card h-100">
-                <div class="icon"><i class="fas fa-allergies"></i></div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="specialty-card">
+                <div class="specialty-icon"><i class="fas fa-allergies"></i></div>
                 <h5>Skin & Allergy</h5>
                 <p>Natural treatments for psoriasis, eczema, acne, and various skin allergies.</p>
             </div>
         </div>
-        <div class="col-md-6 col-lg-4">
-            <div class="treatment-card h-100">
-                <div class="icon"><i class="fas fa-baby"></i></div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="specialty-card">
+                <div class="specialty-icon"><i class="fas fa-baby"></i></div>
                 <h5>Postnatal Care</h5>
                 <p>Comprehensive care programs for new mothers to support recovery and well-being.</p>
             </div>
         </div>
-        <div class="col-md-6 col-lg-4">
-            <div class="treatment-card h-100">
-                <div class="icon"><i class="fas fa-seedling"></i></div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="specialty-card">
+                <div class="specialty-icon"><i class="fas fa-seedling"></i></div>
                 <h5>Wellness & Rejuvenation</h5>
                 <p>Therapies focused on boosting immunity, vitality, and promoting graceful aging.</p>
             </div>
@@ -162,26 +178,114 @@
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="py-5 text-center text-white" style="background-color: #DDB95A; color: #365C32 !important;">
-    <div class="container">
-      <h2 class="text-dark">Ready to Start Your Healing Journey?</h2>
-      <p class="lead text-dark">Our experts are here to guide you. Book a consultation today to find the right treatment for you.</p>
-      <a href="index.html#appointment" class="btn btn-brand mt-3">Book Your Appointment</a>
-    </div>
-  </section>
 
-  <!-- Footer (Same as previous pages) -->
-  <footer class="footer pt-5 pb-4">
-      <!-- ... The same footer code as before ... -->
-      <div class="container">
-        <!-- ... Paste your full footer code here ... -->
-        <div class="text-center">
-            <p>© 2025 Ayurveda Clinic. All Rights Reserved. Designed by You.</p>
+  <!-- Footer -->
+
+<!-- 1. Pre-Footer Call to Action Section -->
+<section class="cta-footer">
+    <div class="container text-center">
+        <h2 class="cta-title">Ready to Begin Your Healing Journey?</h2>
+        <p class="cta-text">Book your consultation today and take the first step towards a healthier, more balanced you.</p>
+        <a href="appointment.html" class="btn btn-primary-hero">Book an Appointment</a>
+    </div>
+</section>
+
+<!-- 2. Main Footer -->
+<footer class="footer">
+    <!-- Curved Top Shape -->
+    <div class="footer-wave">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M1440,21.2101911 C1200,9.40339433 960,3.59660567 720,3.59660567 C480,3.59660567 240,9.40339433 0,21.2101911 L0,120 L1440,120 L1440,21.2101911 Z"></path>
+        </svg>
+    </div>
+
+    <div class="container">
+        <div class="row g-5">
+
+            <!-- Column 1: Brand Info -->
+            <div class="col-lg-4">
+                <a class="footer-brand" href="index.html">
+                    <img src="/images/logo-green.png" alt="Ayurveda Clinic Logo">
+                    <span>Ayurveda Clinic</span>
+                </a>
+                <p class="footer-mission">Your trusted partner in holistic health and wellness, providing authentic Ayurvedic treatments in Calicut.</p>
+                <div class="social-icons-footer">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="col-lg-2 col-md-4">
+                <h5>Explore</h5>
+                <ul class="list-unstyled">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="treatment.html">Treatments</a></li>
+                    <li><a href="appointment.html">Appointment</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact Info -->
+            <div class="col-lg-3 col-md-4">
+                <h5>Get in Touch</h5>
+                <ul class="list-unstyled">
+                    <li><a href="https://maps.google.com/?q=123+Clinic+Road,Calicut,Kerala" target="_blank"><i class="fas fa-map-marker-alt"></i>123 Clinic Road, Calicut</a></li>
+                    <li><a href="tel:0495-2766717"><i class="fas fa-phone"></i>0495-2766717</a></li>
+                    <li><a href="mailto:info@tatvaayurved.com"><i class="fas fa-envelope"></i>info@tatvaayurved.com</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Timings -->
+            <div class="col-lg-3 col-md-4">
+                <h5>Clinic Hours</h5>
+                <ul class="list-unstyled">
+                    <li>Mon - Sat: 9am - 6pm</li>
+                    <li>Sunday: Closed</li>
+                </ul>
+            </div>
+
         </div>
     </div>
-  </footer>
 
+    <!-- 3. Sub-Footer (Copyright Bar) -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>© 2025 Ayurveda Clinic. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>Designed with <i class="fas fa-heart" style="color:#DDB95A;"></i> by Fariz Motionvix</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></a>
+
+
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+        duration: 800,
+        once: true,
+    });
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
