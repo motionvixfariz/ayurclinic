@@ -1092,7 +1092,7 @@
     position: relative;
     padding: 150px 0;
     z-index: 1;
-    background-image: url('/images/person-conducting-reiki-therapy.jpg'); /* CHOOSE A NICE BACKGROUND IMAGE */
+    background-image: url('/images/Swastham-Ayurveda-logo.jpg'); /* CHOOSE A NICE BACKGROUND IMAGE */
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -1399,4 +1399,22 @@ Styles for Appointment Page
     justify-content: center;
     font-size: 2rem;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+
+/* ---
+Styles for Embedded Appointment Page
+--- */
+
+.appointment-embed-section {
+    padding-top: 150px; /* Add space below the fixed navbar */
+    padding-bottom: 80px;
+    background-color: #F7F6F1; /* Your main light background */
+}
+
+/* Style for the Calendly widget container */
+.calendly-inline-widget {
+    border-radius: 15px;
+    overflow: hidden; /* Ensures the rounded corners apply to the widget */
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
 }

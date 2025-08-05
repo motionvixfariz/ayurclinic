@@ -11,10 +11,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-
-  <!-- LINK TO YOUR STYLESHEET -->
+  <!-- LINK TO STYLESHEET -->
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -25,7 +24,7 @@
       <div class="container">
           <a class="navbar-brand d-flex align-items-center" href="index.html">
               <div class="logo-container">
-                  <img src="/images/logo-green.png" alt="Ayurveda Clinic Logo" class="logo-white">
+                  <img src="/images/logo-white.png" alt="Ayurveda Clinic Logo" class="logo-white">
                   <img src="/images/logo-green.png" alt="Ayurveda Clinic Logo" class="logo-green">
               </div>
               <span class="brand-name">Ayurveda Clinic</span>
@@ -58,87 +57,28 @@
   </section>
 
   <!-- Main Appointment Section -->
-  <section class="appointment-form-section py-5">
+   <!-- Main Appointment Section -->
+  <section class="appointment-embed-section">
     <div class="container">
+      <div class="row">
+        <div class="col-12 text-center" data-aos="fade-up">
+          <h1 class="section-title">Schedule Your Consultation</h1>
+          <p class="section-subtitle">Choose a time that works for you. We look forward to speaking with you.</p>
+        </div>
+      </div>
       <div class="row justify-content-center">
-        <div class="col-lg-10 col-xl-8">
-            <form action="https://formspree.io/f/xldljaqv" method="POST" class="appointment-form p-4 p-md-5" data-aos="fade-up">
-
-              <!-- Step 1: Choose Your Doctor -->
-              <div class="mb-5">
-                  <h3 class="form-step-title">1. Choose Your Doctor</h3>
-                  <div class="row g-3">
-                      <div class="col-md-4">
-                          <label class="doctor-select-card">
-                              <input type="radio" name="doctor" value="Dr. Shashi" class="d-none" checked>
-                              <div class="card-content">
-                                  <img src="/images/doctor-profile.jpg" alt="Dr. Shashi">
-                                  <h5>Dr. Shashi</h5>
-                                  <p class="specialty">Chief Physician</p>
-                              </div>
-                          </label>
-                      </div>
-                      <div class="col-md-4">
-                          <label class="doctor-select-card">
-                              <input type="radio" name="doctor" value="Dr. Anu Lakshmi" class="d-none">
-                              <div class="card-content">
-                                  <img src="/images/lady doc.jpg" alt="Dr. Anu Lakshmi">
-                                  <h5>Dr. Anu Lakshmi</h5>
-                                  <p class="specialty">Panchakarma Specialist</p>
-                              </div>
-                          </label>
-                      </div>
-                      <div class="col-md-4">
-                          <label class="doctor-select-card">
-                              <input type="radio" name="doctor" value="Dr. Gouri Shanker" class="d-none">
-                              <div class="card-content">
-                                  <img src="/images/doctor-profile.jpg" alt="Dr. Gouri Shanker">
-                                  <h5>Dr. Gouri Shanker</h5>
-                                  <p class="specialty">Wellness Consultant</p>
-                              </div>
-                          </label>
-                      </div>
-                  </div>
-              </div>
-
-              <!-- Step 2: Your Details -->
-              <div>
-                  <h3 class="form-step-title">2. Your Details</h3>
-                  <div class="row g-4">
-                      <div class="col-md-6 form-floating">
-                          <input type="text" class="form-control" id="fullName" name="name" placeholder="Full Name" required>
-                          <label for="fullName">Full Name*</label>
-                      </div>
-                      <div class="col-md-6 form-floating">
-                          <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
-                          <label for="phone">Phone Number*</label>
-                      </div>
-                      <div class="col-md-6 form-floating">
-                          <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
-                          <label for="email">Email Address*</label>
-                      </div>
-                      <div class="col-md-6 form-floating">
-                          <input type="date" class="form-control" id="appointmentDate" name="date" placeholder="Preferred Date" required>
-                          <label for="appointmentDate">Preferred Date*</label>
-                      </div>
-                      <div class="col-12 form-floating">
-                           <textarea class="form-control" id="message" name="message" placeholder="Reason for Visit" style="height: 120px;"></textarea>
-                           <label for="message">Reason for Visit (Optional)</label>
-                      </div>
-                  </div>
-              </div>
-              
-              <div class="text-center mt-5">
-                  <button type="submit" class="btn btn-primary-hero">Confirm Appointment</button>
-              </div>
-            </form>
+        <div class="col-lg-10 col-xl-8" data-aos="fade-up" data-aos-delay="100">
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/motionvix1/30min" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Calendly inline widget end -->
         </div>
       </div>
     </div>
   </section>
 
   <!-- Trust Section -->
-  <section class="py-5 bg-light-green">
+  <!-- <section class="py-5 bg-light-green">
     <div class="container">
       <div class="row text-center">
         <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
@@ -158,18 +98,18 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Footer -->
 
 <!-- 1. Pre-Footer Call to Action Section -->
-<section class="cta-footer">
+<!-- <section class="cta-footer">
     <div class="container text-center">
         <h2 class="cta-title">Ready to Begin Your Healing Journey?</h2>
         <p class="cta-text">Book your consultation today and take the first step towards a healthier, more balanced you.</p>
         <a href="appointment.html" class="btn btn-primary-hero">Book an Appointment</a>
     </div>
-</section>
+</section> -->
 
 <!-- 2. Main Footer -->
 <footer class="footer">
@@ -187,7 +127,7 @@
             <div class="col-lg-4">
                 <a class="footer-brand" href="index.html">
                     <img src="/images/logo-green.png" alt="Ayurveda Clinic Logo">
-                    <span>Ayurveda Clinic</span>
+                    <span>Swastham Ayurveda</span>
                 </a>
                 <p class="footer-mission">Your trusted partner in holistic health and wellness, providing authentic Ayurvedic treatments in Calicut.</p>
                 <div class="social-icons-footer">
