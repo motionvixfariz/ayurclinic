@@ -50,40 +50,41 @@
 
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-      <div class="container">
-          <a class="navbar-brand d-flex align-items-center" href="index.html">
-              <div class="logo-container">
-                  <img src="/images/logo-white.png" alt="Swastham Ayurveda Clinic Logo" class="logo-white">
-                  <img src="/images/logo-green.png" alt="Swastham Ayurveda Clinic Logo" class="logo-green">
-              </div>
-              <span class="brand-name">Swastham Ayurveda</span>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto">
-                  <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                  <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                  <li class="nav-item"><a class="nav-link" href="treatment.html">Treatments</a></li>
-                  <!-- <li class="nav-item"><a class="nav-link active" href="packages.html">Packages</a></li> -->
-                  <li class="nav-item"><a class="nav-link" href="onlineconsultation.html">Consultation</a></li>
-                  <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-              </ul>
-              <a class="btn btn-brand ms-lg-3" href="appointment.html">Book Appointment</a>
-          </div>
-      </div>
-  </nav>
+<!-- NEW: Legacy Shrinking Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <!-- Logo & Brand Name -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <div class="logo-container">
+                <img src="/images/logo-white.png" alt="Swastham Ayurveda Logo" class="logo-initial">
+                <img src="/images/logo-green.png" alt="Swastham Ayurveda Logo" class="logo-scrolled">
+            </div>
+            <span class="brand-name">Swastham Ayurveda</span>
+        </a>
 
-  <!-- Page Header -->
-  <section class="page-header" style="background-image: url('/images/Swastham-Ayurveda-logo.jpg');">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="treatment.html">Treatments</a></li>
+                <li class="nav-item"><a class="nav-link active" href="packages.html">Packages</a></li>
+                <li class="nav-item"><a class="nav-link" href="onlineconsultation.html">Consultation</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            <a class="btn btn-brand ms-lg-3" href="appointment.html">Book Appointment</a>
+        </div>
+    </div>
+</nav>
+   <!-- Page Header -->
+  <section class="page-header" style="background-image: url('/images/packages-bg.jpg');">
       <div class="container">
           <div class="row">
               <div class="col-12 text-center">
-                  <h1 class="page-title" data-aos="fade-down">Our Wellness Packages</h1>
-                  <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">Curated programs designed for your complete rejuvenation.</p>
+                  <h1 class="page-title" data-aos="fade-down">Curated Wellness Journeys</h1>
+                  <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">Discover our signature packages, designed for profound healing and rejuvenation.</p>
               </div>
           </div>
   </section>
@@ -99,42 +100,42 @@
 
         <!-- Package 1: Rejuvenation Package -->
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="package-card">
+          <div class="package-card-alt">
             <div class="package-card-img">
               <img src="/images/packages/rejuvenation-package.jpg" alt="Rejuvenation Package">
             </div>
             <div class="package-card-body">
               <h5 class="package-title">Rejuvenation Package</h5>
               <p class="package-desc">A 7-day program to revitalize your body and mind, boosting vitality and slowing the aging process.</p>
-              <button class="btn btn-package" data-bs-toggle="modal" data-bs-target="#rejuvenationModal">Know More</button>
+              <button class="btn btn-package mt-auto" data-bs-toggle="modal" data-bs-target="#rejuvenationModal">View Details</button>
             </div>
           </div>
         </div>
 
         <!-- Package 2: Detox & Weight Loss -->
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="package-card">
+          <div class="package-card-alt">
             <div class="package-card-img">
               <img src="/images/packages/detox- weight-loss.jpg" alt="Detox & Weight Loss Package">
             </div>
             <div class="package-card-body">
               <h5 class="package-title">Detox & Weight Loss</h5>
               <p class="package-desc">A 14-day intensive program focused on deep cleansing and healthy weight management.</p>
-              <button class="btn btn-package" data-bs-toggle="modal" data-bs-target="#detoxModal">Know More</button>
+              <button class="btn btn-package mt-auto" data-bs-toggle="modal" data-bs-target="#detoxModal">View Details</button>
             </div>
           </div>
         </div>
 
         <!-- Package 3: Stress Management -->
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="package-card">
+          <div class="package-card-alt">
             <div class="package-card-img">
               <img src="/images/packages/stress-management.jpg" alt="Stress Management Package">
             </div>
             <div class="package-card-body">
               <h5 class="package-title">Stress Management</h5>
-              <p class="package-desc">A 10-day program with calming therapies like Shirodhara to restore mental peace and clarity.</p>
-              <button class="btn btn-package" data-bs-toggle="modal" data-bs-target="#stressModal">Know More</button>
+              <p class="package-desc">A 10-day program with calming therapies to restore mental peace and clarity.</p>
+              <button class="btn btn-package mt-auto" data-bs-toggle="modal" data-bs-target="#stressModal">View Details</button>
             </div>
           </div>
         </div>
@@ -235,7 +236,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div class="row">
+          <div class="row g-4">
             <div class="col-md-5"><img src="/images/packages/rejuvenation-package.jpg" class="img-fluid rounded" alt=""></div>
             <div class="col-md-7">
               <p>This package is designed to reverse the negative effects of stress and environmental factors. Through nourishing therapies, we aim to restore your body's natural vitality, improve Ojas (life essence), and promote a youthful glow.</p>

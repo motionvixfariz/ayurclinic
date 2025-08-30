@@ -44,7 +44,7 @@
   <!-- In <head> -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 
   <!-- YOUR CUSTOM STYLES -->
   <link rel="stylesheet" href="style.css">
@@ -52,17 +52,18 @@
 
 <body>
 
-<!-- REVISED: Modern Shrinking Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+<!-- NEW: Legacy Shrinking Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-        <!-- Logo -->
+        <!-- Logo & Brand Name -->
         <a class="navbar-brand d-flex align-items-center" href="index.html">
-    <div class="logo-container">
-        <img src="/images/logo-white.png" alt="Ayurveda Clinic Logo" class="logo-white">
-        <img src="/images/logo-green.png" alt="Ayurveda Clinic Logo" class="logo-green">
-    </div>
-    <span class="brand-name">Swastham Ayurveda</span>
-</a>
+            <div class="logo-container">
+                <img src="/images/logo-white.png" alt="Swastham Ayurveda Logo" class="logo-initial">
+                <img src="/images/logo-green.png" alt="Swastham Ayurveda Logo" class="logo-scrolled">
+            </div>
+            <span class="brand-name">Swastham Ayurveda</span>
+        </a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -71,6 +72,7 @@
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="treatment.html">Treatments</a></li>
+                <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
                 <li class="nav-item"><a class="nav-link" href="onlineconsultation.html">Consultation</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
@@ -80,63 +82,36 @@
 </nav>
 
 <!-- Modern Hero Section -->
+<!-- NEW: Minimal & Earthy Hero Section -->
 <section class="hero-section">
-    <div class="container">
-        <div class="row align-items-center">
-            
-            <!-- REVISED Left Column: Text Content with Glass Panel -->
-            <div class="col-lg-6 hero-text-column">
-                <div class="hero-text-panel" data-aos="fade-right">
-                    <h1 class="hero-headline">Embrace Balance. Experience Authentic Ayurveda.</h1>
-                    <p class="hero-subtext">Welcome to your sanctuary for healing in Calicut. We combine ancient wisdom with a modern, scientific approach to help you rediscover your natural state of health and well-being.</p>
-                    
-                    <div class="hero-buttons">
-                        <a href="appointment.html" class="btn btn-primary-hero">Book an Appointment</a>
-                        <a href="treatment.html" class="btn btn-secondary-hero">Explore Treatments</a>
-                    </div>
-
-                    <div class="hero-features">
-                        <div class="feature-item">
-                            <i class="fas fa-star"></i>
-                            <span><strong>4.9/5</strong> Google Rating</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-video"></i>
-                            <span>Online Consultations</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-file-invoice-dollar"></i>
-                            <span>Insurance Accepted</span>
-                        </div>
-                    </div>
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <h1 class="hero-headline" data-aos="fade-down">Legacy of Healing, Wisdom of Nature</h1>
+                <p class="hero-subtext" data-aos="fade-up" data-aos-delay="100">Welcome to Swastham Ayurveda, a sanctuary where ancient traditions meet personalized care to restore your natural state of balance and vitality.</p>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+                    <a href="appointment.html" class="btn btn-primary-hero">Book an Appointment</a>
+                    <a href="treatment.html" class="btn btn-secondary-hero">Explore Treatments</a>
                 </div>
             </div>
-
-            <!-- Right Column: Image -->
-            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-                <div class="hero-image-wrapper">
-                    <img src="/images/doctor.png" alt="Serene Ayurvedic setup with a bowl of herbs and natural light">
-                </div>
-            </div>
-
         </div>
     </div>
 </section>
 <!-- REVISED: Modern About Section -->
-<section class="about-section py-5">
+<!-- <section class="about-section py-5 mandala-background">
     <div class="container py-5">
-        <div class="row align-items-center">
+        <div class="row align-items-center"> -->
 
             <!-- Left Column: Image Composition -->
-            <div class="col-lg-6" data-aos="fade-right">
+            <!-- <div class="col-lg-6" data-aos="fade-right">
                 <div class="about-image-composition">
                     <img src="/images/about-bg.jpeg" alt="A serene treatment room at the Ayurveda clinic" class="img-main shadow">
                     <img src="/images/about-wrap.jpeg" alt="High-quality Ayurvedic herbs and oils" class="img-secondary shadow">
                 </div>
-            </div>
+            </div> -->
 
             <!-- Right Column: Text Content -->
-            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <!-- <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
                 <h2 class="section-title">A Legacy of Healing, A Commitment to You</h2>
                 <p class="lead">Your sanctuary for authentic Ayurvedic healing in the heart of Calicut.</p>
                 
@@ -175,46 +150,63 @@
 
         </div>
     </div>
+</section> -->
+<!-- NEW: Content-First About Section -->
+<section class="about-section py-5">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <h2 class="section-title" data-aos="fade-up">A Legacy of Authentic Healing</h2>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100">
+                    At Swastham Ayurveda, we believe that true wellness comes from treating the individual, not just the ailment. Our clinic was founded on the sacred principles of classical Ayurveda, a timeless science of life that offers a profound path to harmony and balance.
+                </p>
+                <p data-aos="fade-up" data-aos-delay="200">
+                    We honor the legacy of this ancient wisdom by focusing on root-cause diagnosis and creating deeply personalized treatment plans. Our compassionate vaidyas combine time-honored knowledge with a modern understanding of health to guide you on your journey back to your natural state of well-being.
+                </p>
+                <a href="about.html" class="btn btn-secondary-hero mt-4" data-aos="fade-up" data-aos-delay="300">Discover Our Full Story</a>
+            </div>
+        </div>
+    </div>
 </section>
 
 
-<!-- REVISED: Philosophy Section (Treatments & Why Us Combined) -->
-<section class="philosophy-section">
+<!-- DELETE the old Philosophy section and REPLACE it with this -->
+
+<!-- NEW: Minimal "Pillars of Our Practice" Section -->
+<section class="pillars-section py-5">
     <div class="container py-5">
 
-        <!-- Main Section Title -->
-        <div class="text-center text-white" data-aos="fade-up">
-            <h2 class="section-title text-white">A Foundation of Trust & Tradition</h2>
-            <p class="section-subtitle text-white-50">Discover the principles and practices that define our care.</p>
-        </div>
-
         <!-- Part 1: Why Choose Us -->
-        <div class="why-us-part mt-5">
-             <div class="row g-4">
+        <div class="why-us-part" data-aos="fade-up">
+            <div class="text-center">
+                <h2 class="section-title">Why Choose Swastham Ayurveda?</h2>
+                <p class="section-subtitle">Our care is rooted in four key principles.</p>
+            </div>
+             <div class="row g-4 mt-4">
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="glass-card text-center">
-                        <div class="glass-card-icon"><i class="fas fa-user-md"></i></div>
-                        <h5>Experienced Doctors</h5>
+                    <div class="pillar-card text-center">
+                        <div class="pillar-icon"><i class="fas fa-user-md"></i></div>
+                        <h5>Experienced Vaidyas</h5>
                         <p>Our team consists of highly qualified and seasoned Ayurvedic physicians.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                     <div class="glass-card text-center">
-                        <div class="glass-card-icon"><i class="fas fa-certificate"></i></div>
+                     <div class="pillar-card text-center">
+                        <div class="pillar-icon"><i class="fas fa-certificate"></i></div>
                         <h5>Authentic Therapies</h5>
                         <p>We use traditional methods and high-quality, genuine herbal preparations.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="glass-card text-center">
-                        <div class="glass-card-icon"><i class="fas fa-hand-holding-medical"></i></div>
+                    <div class="pillar-card text-center">
+                        <div class="pillar-icon"><i class="fas fa-hand-holding-medical"></i></div>
                         <h5>Personalized Care</h5>
                         <p>Every treatment plan is customized to your unique body constitution.</p>
                     </div>
                 </div>
                  <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="glass-card text-center">
-                        <div class="glass-card-icon"><i class="fas fa-star"></i></div>
+                    <div class="pillar-card text-center">
+                        <div class="pillar-icon"><i class="fas fa-star"></i></div>
                         <h5>Patient Satisfaction</h5>
                         <p>We are proud of our 4.9+ Google rating and positive patient testimonials.</p>
                     </div>
@@ -222,36 +214,46 @@
             </div>
         </div>
         
-        <hr class="section-divider">
+        <!-- Elegant Divider -->
+        <div class="section-divider" data-aos="fade-up">
+            <i class="fas fa-leaf"></i>
+        </div>
 
         <!-- Part 2: Core Treatments -->
-        <div class="core-treatments-part mt-5">
-            <div class="text-center" data-aos="fade-up">
-                 <h3 class="text-white">Our Core Treatments</h3>
+        <div class="core-treatments-part mt-5" data-aos="fade-up">
+            <div class="text-center">
+                 <h2 class="section-title">Our Core Treatments</h2>
+                 <p class="section-subtitle">Foundational therapies to restore balance and health.</p>
             </div>
             <div class="row g-4 mt-4">
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                    <div class="glass-card">
-                        <div class="icon"><i class="fas fa-spa"></i></div>
-                        <h5>Panchakarma</h5>
-                        <p>A comprehensive detoxification and rejuvenation program to purify the body and mind.</p>
-                        <a href="treatment.html#panchakarma" class="btn-glass-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <div class="pillar-card">
+                        <div class="pillar-icon text-center"><i class="fas fa-spa"></i></div>
+                        <h5 class="text-center">Panchakarma</h5>
+                        <p class="text-center">A comprehensive detoxification program to purify the body and mind.</p>
+                        <div class="text-center mt-3">
+                            <a href="treatment.html#panchakarma" class="btn-pillar-link">Learn More</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                    <div class="glass-card">
-                        <div class="icon"><i class="fas fa-leaf"></i></div>
-                        <h5>Abhyanga</h5>
-                        <p>A traditional full-body massage with medicated oils to improve circulation and relieve stress.</p>
-                         <a href="treatment.html#abhyanga" class="btn-glass-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <div class="pillar-card">
+                        <div class="pillar-icon text-center"><i class="fas fa-leaf"></i></div>
+                        <h5 class="text-center">Abhyanga</h5>
+                        <p class="text-center">A traditional full-body massage with medicated oils to improve circulation.</p>
+                        <div class="text-center mt-3">
+                            <a href="treatment.html#abhyanga" class="btn-pillar-link">Learn More</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
-                     <div class="glass-card">
-                        <div class="icon"><i class="fas fa-tint"></i></div> 
-                        <h5>Shirodhara</h5>
-                        <p>A calming therapy where a continuous stream of warm oil is poured over the forehead.</p>
-                         <a href="treatment.html#shirodhara" class="btn-glass-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                     <div class="pillar-card">
+                        <div class="pillar-icon text-center"><i class="fas fa-tint"></i></div>
+                        <h5 class="text-center">Shirodhara</h5>
+                        <p class="text-center">A calming therapy where warm oil is poured over the forehead to soothe the mind.</p>
+                        <div class="text-center mt-3">
+                            <a href="treatment.html#shirodhara" class="btn-pillar-link">Learn More</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -271,8 +273,8 @@
     </div>
       <div class="container">
           <div class="text-center">
-              <h2 class="section-title text-white">Ayurvedic Treatments</h2>
-              <p class="section-subtitle text-white-50">Explore our authentic therapies for holistic well-being.</p>
+              <h1 class="section-title">Ayurvedic Treatments</h1>
+              <p class="section-subtitle">Explore our authentic therapies for holistic well-being.</p>
           </div>
 
           <!-- Swiper -->
@@ -357,7 +359,7 @@
 
 
   <!-- Featured Packages Section -->
-<section class="featured-packages-section py-5">
+<section class="featured-packages-section py-5 mandala-background">
     <div class="container">
         <div class="text-center" data-aos="fade-up">
             <h2 class="section-title">Featured Wellness Journeys</h2>
@@ -367,7 +369,7 @@
 
             <!-- Package 1: Rejuvenation Package -->
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="package-card">
+                <div class="package-card-alt">
                     <div class="package-card-img">
                         <img src="/images/packages/rejuvenation-package.jpg" alt="Rejuvenation Package">
                     </div>
@@ -382,7 +384,7 @@
 
             <!-- Package 2: Detox & Weight Loss -->
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="package-card">
+                <div class="package-card-alt">
                     <div class="package-card-img">
                         <img src="/images/packages/detox- weight-loss.jpg" alt="Detox & Weight Loss Package">
                     </div>
@@ -396,7 +398,7 @@
 
             <!-- Package 3: Stress Management -->
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="package-card">
+                <div class="package-card-alt">
                     <div class="package-card-img">
                         <img src="/images/packages/stress-management.jpg" alt="Stress Management Package">
                     </div>
@@ -476,7 +478,7 @@
   <!-- Team Section -->
 
 <!--  Glowing Spotlight Team Section -->
-<section class="team-section py-5">
+<section class="team-section py-5 mandala-background">
     <div class="container py-4" data-aos="fade-up">
         <div class="text-center mb-5">
             <h2 class="section-title">Meet Our Vaidyas</h2>
@@ -667,23 +669,15 @@
     
 
 
-// Initialize Swiper for the treatment carousel with Coverflow effect
+// Initialize Swiper for the treatment carousel with a clean slider effect
 const swiper = new Swiper('.treatment-swiper', {
-    effect: 'coverflow', // The new effect
-    grabCursor: true,
-    centeredSlides: true, // Center the active slide
-    slidesPerView: 'auto', // Let Swiper determine the number of slides based on their width
     loop: true,
+    centeredSlides: true,
+    slidesPerView: 'auto', // Show as many as fit
+    spaceBetween: 30,      // Space between cards
     autoplay: {
-        delay: 4000, // 4 seconds delay
+        delay: 4000,
         disableOnInteraction: false,
-    },
-    coverflowEffect: {
-        rotate: 30,       // Slide rotate in degrees
-        stretch: 0,       // Stretch space between slides (in px)
-        depth: 100,       // Depth offset in px (slides translate in Z axis)
-        modifier: 1,      // Effect multiplier
-        slideShadows: false, // Do not cast shadows on slides
     },
     pagination: {
         el: '.swiper-pagination',
@@ -693,6 +687,19 @@ const swiper = new Swiper('.treatment-swiper', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    // Responsive breakpoints
+    breakpoints: {
+        // when window width is >= 768px
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        // when window width is >= 992px
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        }
+    }
 });
 
     // Inside your main script tag
